@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Hireflow VA — Portland VA Placement Service Founded by Chris Merz</title>
+  <meta name="description" content="Hireflow VA was built by Portland real estate agent and investor Chris Merz after experiencing firsthand the power of a properly trained, placed VA." />
+  <meta name="keywords" content="Chris Merz, Hireflow VA founder, Portland VA placement, real estate virtual assistant, about Hireflow VA" />
+  <meta name="author" content="Hireflow VA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Hireflow VA — Founded by Chris Merz" />
+  <meta property="og:description" content="Built by a Portland real estate agent who needed it first. Hireflow VA runs the entire hiring process so you make one decision." />
+  <meta property="og:url" content="https://hireflowva.com/about.html" />
+  <meta property="og:site_name" content="Hireflow VA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Hireflow VA — Founded by Chris Merz" />
+  <meta name="twitter:description" content="Built by someone who needed it first. VA placement for real business owners." />
+  <link rel="canonical" href="https://hireflowva.com/about.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300C2B5'/><text x='5' y='24' font-size='20' font-weight='800' fill='white' font-family='system-ui'>H</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* Founder story layout */
+    .founder-layout {
+      display: grid;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .founder-layout { grid-template-columns: 380px 1fr; gap: 80px; }
+    }
+
+    /* Founder card */
+    .founder-card {
+      position: sticky;
+      top: 96px;
+    }
+
+    .founder-portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(155deg, var(--navy) 0%, var(--dark-navy) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-portrait::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(0,194,181,0.25) 0%, transparent 60%);
+    }
+
+    .founder-initials {
+      font-size: 5rem;
+      font-weight: 900;
+      font-family: var(--font-heading);
+      color: rgba(255, 255, 255, 0.12);
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .founder-name-block {
+      text-align: center;
+    }
+
+    .founder-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      color: var(--dark-navy);
+      margin-bottom: 4px;
+    }
+
+    .founder-title {
+      font-size: 0.82rem;
+      color: var(--teal);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .founder-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .founder-tag {
+      background: var(--light-teal);
+      color: var(--navy);
+      border: 1px solid rgba(0,194,181,0.2);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .founder-location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+    }
+
+    /* Story prose */
+    .story-prose {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .story-prose p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--dark-navy);
+    }
+
+    .story-prose p.lead {
+      font-size: 1.2rem;
+      font-family: var(--font-heading);
+      color: var(--dark-navy);
+      line-height: 1.6;
+    }
+
+    .story-prose .highlight {
+      background: var(--light-teal);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--navy);
+      line-height: 1.7;
+      margin-block: 8px;
+    }
+
+    /* Mission split */
+    .mission-split {
+      display: grid;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (min-width: 860px) {
+      .mission-split { grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    }
+
+    .mission-split h2 { margin-bottom: 16px; }
+    .mission-split p  { font-size: 1rem; line-height: 1.75; margin-bottom: 0; }
+
+    /* Partnership list */
+    .partnership-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1.5px solid rgba(0,194,181,0.2);
+    }
+
+    .partnership-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 28px;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: background var(--transition);
+    }
+
+    .partnership-item:last-child { border-bottom: none; }
+    .partnership-item:hover      { background: var(--light-teal); }
+
+    .partnership-item__we {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .partnership-item__content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .partnership-item__you {
+      font-size: 0.9rem;
+      color: var(--mid-gray);
+      text-decoration: line-through;
+      text-decoration-color: rgba(122,143,166,0.5);
+    }
+
+    .partnership-item__arrow {
+      color: var(--teal);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .partnership-item__we-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark-navy);
+    }
+
+    /* Roots / what we believe */
+    .beliefs-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .beliefs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 900px) {
+      .beliefs-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .belief-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      border: 1.5px solid rgba(0,0,0,0.07);
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+
+    .belief-card:hover {
+      border-color: rgba(0,194,181,0.3);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .belief-icon {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .belief-card h4 { margin-bottom: 8px; }
+    .belief-card p  { font-size: 0.875rem; line-height: 1.65; }
+
+    /* Who we serve strip */
+    .serve-strip {
+      background: var(--dark-navy);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      display: grid;
+      gap: 32px;
+    }
+
+    @media (min-width: 860px) {
+      .serve-strip { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    }
+
+    .serve-strip h2   { color: var(--white); margin-bottom: 12px; }
+    .serve-strip p    { color: rgba(255,255,255,0.55); }
+
+    .serve-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .serve-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .serve-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Hireflow VA — Home">
+            <div class="nav__logo-mark" aria-hidden="true">HF</div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">Hireflow VA</span>
+              <span class="nav__logo-sub">Portland, OR</span>
+            </div>
+          </a>
+
+          <div class="nav__links" role="list">
+            <a href="index.html"         class="nav__link" role="listitem">Home</a>
+            <a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+            <a href="pricing.html"       class="nav__link" role="listitem">Pricing</a>
+            <a href="about.html"         class="nav__link" role="listitem">About</a>
+            <a href="book-a-call.html"   class="btn btn-primary nav__cta" role="listitem">Book a Free Call</a>
+          </div>
+
+          <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav__mobile" id="mobileMenu" role="list">
+        <a href="index.html"         class="nav__mobile-link" role="listitem">Home</a>
+        <a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+        <a href="pricing.html"       class="nav__mobile-link" role="listitem">Pricing</a>
+        <a href="about.html"         class="nav__mobile-link" role="listitem">About</a>
+        <a href="book-a-call.html"   class="btn btn-primary" role="listitem">Book a Free Call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="section-label">Our Story</span>
+          <h1 class="fade-up">Built by someone who needed it first.</h1>
+          <p class="fade-up-2">A real estate agent, multifamily investor, and podcast co-host who ran out of hours before he ran out of ideas — and built the system that fixed it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOUNDER STORY ══════════════════════════════════════ -->
+    <section class="section" id="story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="founder-layout">
+
+          <!-- Sticky founder card -->
+          <aside class="founder-card" aria-label="About Chris Merz">
+            <div class="founder-portrait" aria-hidden="true">
+              <span class="founder-initials">CM</span>
+            </div>
+            <div class="founder-name-block">
+              <div class="founder-name">Chris Merz</div>
+              <div class="founder-title">Founder, Hireflow VA</div>
+              <div class="founder-tags" aria-label="Roles">
+                <span class="founder-tag">Real Estate Agent</span>
+                <span class="founder-tag">Multifamily Investor</span>
+                <span class="founder-tag">Podcast Co-Host</span>
+                <span class="founder-tag">Portland REI Meetup</span>
+              </div>
+              <div class="founder-location">
+                <span aria-hidden="true">📍</span> Portland, OR
+              </div>
+            </div>
+          </aside>
+
+          <!-- Story prose -->
+          <article class="story-prose" aria-labelledby="story-heading">
+            <h2 id="story-heading" class="sr-only">Chris Merz's Story</h2>
+
+            <p class="lead">I'm Chris Merz — a licensed real estate agent, multifamily investor, podcast co-host, and the organizer of the Portland REI Meetup.</p>
+
+            <p>For a long time, I was doing all of it alone.</p>
+
+            <p>Client calls. Deal analysis. Meetup logistics. Podcast production. Marketing. Inbox. Spreadsheets. All of it.</p>
+
+            <p class="highlight">I wasn't running out of ideas. I was running out of hours.</p>
+
+            <p>I knew I needed to delegate. I just didn't have the time to figure out how to hire, vet, and train someone — and actually trust them with my business.</p>
+
+            <p>So I built the process myself. Hired my first VA, refined the system, and watched what happened when the right person — properly trained — stepped into the work.</p>
+
+            <p class="highlight">That VA became my partner. Today they run the systems that used to follow me into the evenings.</p>
+
+            <p>That experience is exactly what we built Hireflow VA to give other business owners and real estate professionals.</p>
+
+            <div class="mt-16">
+              <a href="book-a-call.html" class="btn btn-primary">Talk to Chris →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MISSION SPLIT ══════════════════════════════════════ -->
+    <section class="section bg-light" id="mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="mission-split">
+
+          <div>
+            <span class="section-label">What We Do</span>
+            <h2 id="mission-heading">We run the entire hiring process. You make one decision.</h2>
+            <div class="divider"></div>
+            <p>We source, vet, test, place, and train virtual assistants for small business owners, real estate agents, and investors across the country. Based in Portland, OR — every client works directly with a real person who knows your business, not a ticket queue.</p>
+          </div>
+
+          <div>
+            <span class="section-label">What We're Not</span>
+            <h2>This isn't a marketplace. It's a done-for-you partnership.</h2>
+            <div class="partnership-list" aria-label="What we handle vs. what you'd otherwise do">
+              <div class="partnership-item">
+                <div class="partnership-item__we" aria-hidden="true">We</div>
+                <div class="partnership-item__content">
+                  <span class="partnership-item__you">You sort resumes</span>
+                  <span class="partnership-item__arrow">→</span>
+                  <span class="partnership-item__we-text">We sort resumes</span>
+                </div>
+              </div>
+              <div class="partnership-item">
+                <div class="partnership-item__we" aria-hidden="true">We</div>
+                <div class="partnership-item__content">
+                  <span class="partnership-item__you">You build the skills test</span>
+                  <span class="partnership-item__arrow">→</span>
+                  <span class="partnership-item__we-text">We build the skills test</span>
+                </div>
+              </div>
+              <div class="partnership-item">
+                <div class="partnership-item__we" aria-hidden="true">We</div>
+                <div class="partnership-item__content">
+                  <span class="partnership-item__you">You create the training</span>
+                  <span class="partnership-item__arrow">→</span>
+                  <span class="partnership-item__we-text">We create the training</span>
+                </div>
+              </div>
+              <div class="partnership-item">
+                <div class="partnership-item__we" aria-hidden="true">We</div>
+                <div class="partnership-item__content">
+                  <span class="partnership-item__you">You wonder if they're right</span>
+                  <span class="partnership-item__arrow">→</span>
+                  <span class="partnership-item__we-text">The 30-day guarantee covers that</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WHAT WE BELIEVE ════════════════════════════════════ -->
+    <section class="section" aria-labelledby="beliefs-heading">
+      <div class="container">
+        <div class="centered">
+          <span class="section-label">Our Approach</span>
+          <h2 class="section-heading" id="beliefs-heading">What we believe about hiring VAs</h2>
+          <p class="section-sub">The principles that shape how we run every placement.</p>
+        </div>
+
+        <div class="beliefs-grid mt-48">
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">🎯</span>
+            <h4>Fit beats availability</h4>
+            <p>A VA who's available immediately but wrong for your business will cost you more than one worth waiting two weeks for. We don't rush fit.</p>
+          </div>
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">🔧</span>
+            <h4>Training is not optional</h4>
+            <p>Smart people still need to know your systems. Untrained VAs fail not because they're incapable, but because they were never set up to succeed.</p>
+          </div>
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">🤝</span>
+            <h4>Placement is a relationship</h4>
+            <p>We're not a job board. We stay involved after placement because a great hire at day one can still drift without proper support and check-ins.</p>
+          </div>
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">📋</span>
+            <h4>Process creates trust</h4>
+            <p>Business owners struggle to delegate because they don't trust that things will be done right. SOPs and structured onboarding solve that problem directly.</p>
+          </div>
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">💡</span>
+            <h4>Simple pricing is a feature</h4>
+            <p>Hidden fees and percentage-of-salary models create misaligned incentives. We charge a flat fee because that's what an honest service looks like.</p>
+          </div>
+
+          <div class="belief-card">
+            <span class="belief-icon" aria-hidden="true">🛡</span>
+            <h4>Guarantees mean something</h4>
+            <p>A guarantee that's hard to claim isn't a guarantee. Ours is simple: not the right fit in 30 days, we re-run the entire process at no cost. No exceptions.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WHO WE SERVE ═══════════════════════════════════════ -->
+    <section class="section--sm" aria-labelledby="serve-heading">
+      <div class="container">
+        <div class="serve-strip">
+          <div>
+            <span class="section-label" style="color:rgba(255,255,255,0.4);">Our Clients</span>
+            <h2 id="serve-heading">Who we work with</h2>
+            <p>We primarily serve small business owners, real estate professionals, and operators who are ready to delegate but don't have the bandwidth to run a hiring process themselves.</p>
+            <div class="mt-32">
+              <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
+            </div>
+          </div>
+          <ul class="serve-list" aria-label="Types of clients we serve">
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Real estate agents and brokers</li>
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Multifamily and short-term rental investors</li>
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Small business owners wearing too many hats</li>
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Coaches, consultants, and service providers</li>
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Operators building out their first remote team</li>
+            <li class="serve-item"><div class="serve-dot" aria-hidden="true"></div>Entrepreneurs ready to stop doing everything themselves</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ BOTTOM CTA ════════════════════════════════════════ -->
+    <section class="section cta-section" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-section__inner">
+          <span class="section-label" style="color:rgba(255,255,255,0.4);">Work With Us</span>
+          <h2>Let's find your person.</h2>
+          <p>Book a free 20-minute needs assessment. No pitch. Just a conversation about your business and what you need.</p>
+          <div class="cta-section__actions">
+            <a href="book-a-call.html" class="btn btn-primary btn-lg">Book a Free Needs Assessment →</a>
+            <a href="how-it-works.html" class="btn btn-outline-white btn-lg">See How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="Hireflow VA">
+            <div class="footer__logo-mark" aria-hidden="true">HF</div>
+            <span class="footer__logo-name">Hireflow VA</span>
+          </a>
+          <p class="footer__desc">Trained virtual assistants. Placed, launched, and guaranteed. Your partner in matching virtual talent.</p>
+          <div class="footer__location" aria-label="Location">
+            <span aria-hidden="true">📍</span> Portland, OR
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html"        class="footer__link">About Us</a></li>
+            <li><a href="how-it-works.html" class="footer__link">How It Works</a></li>
+            <li><a href="pricing.html"      class="footer__link">Pricing</a></li>
+            <li><a href="book-a-call.html"  class="footer__link">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">About</div>
+          <ul class="footer__links">
+            <li><a href="#story"   class="footer__link">Chris's Story</a></li>
+            <li><a href="#mission" class="footer__link">Our Mission</a></li>
+            <li><a href="#beliefs-heading" class="footer__link">What We Believe</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">🌐</div>
+              <span>hireflowva.com</span>
+            </div>
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">📍</div>
+              <span>Portland, OR</span>
+            </div>
+          </div>
+          <div class="mt-24">
+            <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="year">2025</span> Hireflow VA. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

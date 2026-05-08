@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hireflow VA Pricing — Flat-Fee Virtual Assistant Placement | Portland, OR</title>
+  <meta name="description" content="Simple flat-fee pricing. Starting at $1,000 one-time. No monthly retainers. 30-day fit guarantee included." />
+  <meta name="keywords" content="virtual assistant pricing, VA placement cost, flat fee VA, hire virtual assistant Portland OR, Hireflow VA pricing" />
+  <meta name="author" content="Hireflow VA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hireflow VA Pricing — Flat-Fee VA Placement" />
+  <meta property="og:description" content="Simple flat-fee pricing. Starting at $1,000 one-time. No monthly retainers. 30-day fit guarantee included." />
+  <meta property="og:url" content="https://hireflowva.com/pricing.html" />
+  <meta property="og:site_name" content="Hireflow VA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hireflow VA Pricing — Flat-Fee VA Placement" />
+  <meta name="twitter:description" content="Starting at $1,000 one-time. No retainers, no surprises." />
+  <link rel="canonical" href="https://hireflowva.com/pricing.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300C2B5'/><text x='5' y='24' font-size='20' font-weight='800' fill='white' font-family='system-ui'>H</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* Pricing cards layout */
+    .pricing-trio {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+
+    @media (min-width: 860px) {
+      .pricing-trio {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+      }
+    }
+
+    /* Extend plan-card with founding-rate treatment */
+    .plan-card--founding {
+      border-color: var(--teal);
+      box-shadow: 0 8px 48px rgba(0, 194, 181, 0.2);
+    }
+
+    .plan-card--founding .plan-name { color: var(--navy); }
+
+    .founding-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(0, 194, 181, 0.08);
+      border: 1px solid rgba(0, 194, 181, 0.25);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      color: #008f84;
+      font-weight: 500;
+      line-height: 1.5;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .founding-note__icon { flex-shrink: 0; }
+
+    /* Spots remaining bar */
+    .spots-bar {
+      margin-top: 20px;
+    }
+
+    .spots-bar__label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--mid-gray);
+      margin-bottom: 6px;
+    }
+
+    .spots-bar__label span:last-child { color: var(--teal); }
+
+    .spots-bar__track {
+      height: 6px;
+      background: rgba(0, 194, 181, 0.15);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .spots-bar__fill {
+      height: 100%;
+      background: var(--teal);
+      border-radius: 999px;
+      width: 70%; /* 7 of 10 claimed */
+      transition: width 1.2s ease;
+    }
+
+    /* No-nonsense pricing callout */
+    .no-nonsense {
+      background: var(--dark-navy);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      gap: 40px;
+    }
+
+    @media (min-width: 860px) {
+      .no-nonsense { grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    }
+
+    .no-nonsense h2   { color: var(--white); margin-bottom: 14px; }
+    .no-nonsense p    { color: rgba(255, 255, 255, 0.55); }
+
+    .no-nonsense-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .no-nonsense-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .no-nonsense-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(0, 194, 181, 0.2);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Guarantee section */
+    .guarantee-section {
+      background: linear-gradient(135deg, var(--teal) 0%, #00a89d 100%);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guarantee-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.12) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .guarantee-section__inner { position: relative; z-index: 1; }
+
+    .guarantee-section h2 { color: var(--white); margin-bottom: 16px; }
+    .guarantee-section p  { color: rgba(255, 255, 255, 0.8); font-size: 1.05rem; max-width: 580px; margin-inline: auto; }
+
+    .guarantee-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .guarantee-section .btn-navy {
+      margin-top: 32px;
+    }
+
+    /* Pricing comparison table (mobile: cards; desktop: table) */
+    .compare-table-wrap { overflow-x: auto; }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 580px;
+    }
+
+    .compare-table th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+      background: #f8fbff;
+    }
+
+    .compare-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .compare-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+
+    .compare-table td {
+      padding: 14px 20px;
+      color: var(--dark-navy);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      vertical-align: middle;
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    .compare-table tr:hover td { background: var(--light-teal); }
+
+    .compare-table .check  { color: var(--teal);  font-size: 1rem; font-weight: 700; }
+    .compare-table .dash   { color: var(--mid-gray); }
+    .compare-table .addon  { font-size: 0.8rem; color: var(--teal); font-weight: 600; }
+
+    .compare-table td:first-child { font-weight: 500; color: var(--dark-navy); }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Hireflow VA — Home">
+            <div class="nav__logo-mark" aria-hidden="true">HF</div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">Hireflow VA</span>
+              <span class="nav__logo-sub">Portland, OR</span>
+            </div>
+          </a>
+
+          <div class="nav__links" role="list">
+            <a href="index.html"         class="nav__link" role="listitem">Home</a>
+            <a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+            <a href="pricing.html"       class="nav__link" role="listitem">Pricing</a>
+            <a href="about.html"         class="nav__link" role="listitem">About</a>
+            <a href="book-a-call.html"   class="btn btn-primary nav__cta" role="listitem">Book a Free Call</a>
+          </div>
+
+          <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav__mobile" id="mobileMenu" role="list">
+        <a href="index.html"         class="nav__mobile-link" role="listitem">Home</a>
+        <a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+        <a href="pricing.html"       class="nav__mobile-link" role="listitem">Pricing</a>
+        <a href="about.html"         class="nav__mobile-link" role="listitem">About</a>
+        <a href="book-a-call.html"   class="btn btn-primary" role="listitem">Book a Free Call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="section-label">Simple Pricing</span>
+          <h1 class="fade-up">A simple, flat-priced path from hired to humming.</h1>
+          <p class="fade-up-2">Start with placement. Add training if you want a head start. Keep sharpening with monthly coaching. No monthly retainers to get started. No percentage of your VA's salary. No surprises.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PRICING CARDS ══════════════════════════════════════ -->
+    <section class="section" id="plans" aria-labelledby="plans-heading">
+      <div class="container">
+
+        <div class="pricing-trio">
+
+          <!-- Card 1 — FEATURED: Hiring Package -->
+          <div class="plan-card plan-card--founding" style="position:relative;" aria-label="Hiring Package — Featured">
+            <div class="plan-badge">Founding Rate</div>
+
+            <div class="plan-name">Hiring Package</div>
+            <div class="plan-price">
+              <span class="plan-price__currency">$</span>
+              <span class="plan-price__amount">1,000</span>
+            </div>
+            <div class="plan-price__period">one-time</div>
+
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>End-to-end sourcing and vetting</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Matched to your exact role and workflows</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Placed within your business in 30 days or we re-run the search free</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>30-day fit guarantee — not working? We re-hire at no extra cost</span>
+              </li>
+            </ul>
+
+            <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;">Claim Your Spot →</a>
+
+            <div class="founding-note">
+              <span class="founding-note__icon" aria-hidden="true">⚡</span>
+              <span>Founding member pricing capped at first 10 clients.</span>
+            </div>
+
+            <div class="spots-bar" aria-label="Founding spots remaining">
+              <div class="spots-bar__label">
+                <span>Spots claimed</span>
+                <span>3 of 10 remaining</span>
+              </div>
+              <div class="spots-bar__track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="70% of founding spots claimed">
+                <div class="spots-bar__fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 — Training Add-On -->
+          <div class="plan-card" aria-label="Training Add-On">
+            <div class="plan-badge" style="background:var(--navy);position:absolute;top:-14px;left:50%;transform:translateX(-50%);">Optional Add-On</div>
+
+            <div class="plan-name" style="margin-top:8px;">Training Add-On</div>
+            <div class="plan-price">
+              <span class="plan-price__currency">$</span>
+              <span class="plan-price__amount">750</span>
+            </div>
+            <div class="plan-price__period">one-time</div>
+            <p class="plan-desc mt-16">Recommended if you want your VA ready with zero ramp-up time.</p>
+
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>4 structured training sessions</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Custom-built around your tools and workflows</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>VA fully operational from day one</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Skip the onboarding guesswork entirely</span>
+              </li>
+            </ul>
+
+            <a href="book-a-call.html" class="btn btn-outline" style="width:100%;justify-content:center;">Add This On</a>
+          </div>
+
+          <!-- Card 3 — Ongoing Education -->
+          <div class="plan-card" style="position:relative;" aria-label="Ongoing Education">
+            <div class="plan-badge" style="background:var(--mid-gray);position:absolute;top:-14px;left:50%;transform:translateX(-50%);">Cancel Anytime</div>
+
+            <div class="plan-name" style="margin-top:8px;">Ongoing Education</div>
+            <div class="plan-price">
+              <span class="plan-price__currency">$</span>
+              <span class="plan-price__amount">75</span>
+              <span class="plan-price__period">/mo</span>
+            </div>
+            <div class="plan-price__period">monthly</div>
+            <p class="plan-desc mt-16">Keep your VA sharp and growing well past the placement.</p>
+
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Continued skill development</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>New-tool and workflow upgrade sessions</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Monthly performance check-ins</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Keeps your VA sharp — long term</span>
+              </li>
+            </ul>
+
+            <a href="book-a-call.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ NO-NONSENSE CALLOUT ════════════════════════════════ -->
+    <section class="section--sm" aria-labelledby="nononsense-heading">
+      <div class="container">
+        <div class="no-nonsense">
+          <div>
+            <span class="section-label" style="color:rgba(255,255,255,0.4);">Transparent Pricing</span>
+            <h2 id="nononsense-heading">No hidden fees.<br>Ever.</h2>
+            <p>We charge a flat one-time placement fee. That's it. You pay your VA directly at whatever rate you negotiate with them. We don't take a cut of their salary, charge a percentage of your contract, or bill you monthly to keep your placement active.</p>
+          </div>
+          <ul class="no-nonsense-list" aria-label="What we never charge">
+            <li class="no-nonsense-item">
+              <div class="no-nonsense-check" aria-hidden="true">✓</div>
+              No percentage of your VA's salary
+            </li>
+            <li class="no-nonsense-item">
+              <div class="no-nonsense-check" aria-hidden="true">✓</div>
+              No monthly retainer just to keep your placement
+            </li>
+            <li class="no-nonsense-item">
+              <div class="no-nonsense-check" aria-hidden="true">✓</div>
+              No renewal fee after the guarantee window
+            </li>
+            <li class="no-nonsense-item">
+              <div class="no-nonsense-check" aria-hidden="true">✓</div>
+              No upcharge for niche roles or specializations
+            </li>
+            <li class="no-nonsense-item">
+              <div class="no-nonsense-check" aria-hidden="true">✓</div>
+              No cost for a rematch within the guarantee period
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FEATURE COMPARISON TABLE ══════════════════════════ -->
+    <section class="section bg-light" aria-labelledby="compare-heading">
+      <div class="container">
+        <div class="centered">
+          <span class="section-label">What's Included</span>
+          <h2 class="section-heading" id="compare-heading">Everything at a glance</h2>
+          <p class="section-sub">See exactly what's covered across each option.</p>
+        </div>
+
+        <div class="compare-table-wrap mt-48">
+          <table class="compare-table" aria-label="Plan feature comparison">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Hiring Package<br><span style="color:var(--teal);font-weight:500;letter-spacing:0;text-transform:none;font-size:0.8rem;">$1,000 one-time</span></th>
+                <th scope="col">Training Add-On<br><span style="color:var(--navy);font-weight:500;letter-spacing:0;text-transform:none;font-size:0.8rem;">+$750 one-time</span></th>
+                <th scope="col">Ongoing Education<br><span style="color:var(--mid-gray);font-weight:500;letter-spacing:0;text-transform:none;font-size:0.8rem;">$75/mo</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>End-to-end sourcing &amp; posting</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>100–200+ applicants filtered for you</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Role-specific skills assessment</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Screening interviews conducted</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Curated shortlist (2–3 candidates)</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>30-day fit guarantee &amp; free rematch</td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Structured onboarding sessions (×4)</td>
+                <td><span class="addon" aria-label="Add-on">Add-on</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Custom workflow &amp; tool training</td>
+                <td><span class="addon" aria-label="Add-on">Add-on</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Day-one productivity guarantee</td>
+                <td><span class="addon" aria-label="Add-on">Add-on</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+              </tr>
+              <tr>
+                <td>Monthly performance check-ins</td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+              </tr>
+              <tr>
+                <td>New-tool upgrade sessions</td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+              </tr>
+              <tr>
+                <td>Ongoing skill development</td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="dash" aria-label="Not included">—</span></td>
+                <td><span class="check" aria-label="Included">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GUARANTEE ══════════════════════════════════════════ -->
+    <section class="section" id="guarantee" aria-labelledby="guarantee-heading">
+      <div class="container">
+        <div class="guarantee-section">
+          <div class="guarantee-section__inner">
+            <span class="guarantee-icon" aria-hidden="true">🛡</span>
+            <h2 id="guarantee-heading">Not the right fit? We re-run the entire process. Free.</h2>
+            <p>Every hiring package includes a 30-day fit guarantee. If the placement isn't working within the first 30 days, we restart the full hiring process — sourcing, vetting, shortlisting, everything — at no additional cost.</p>
+            <a href="book-a-call.html" class="btn btn-navy btn-lg">Book a Free Call →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ════════════════════════════════════════════════ -->
+    <section class="section bg-light" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="centered">
+          <span class="section-label">Questions</span>
+          <h2 class="section-heading" id="faq-heading">Pricing FAQs</h2>
+          <p class="section-sub">Everything you need to know before booking.</p>
+        </div>
+
+        <div class="faq-list mt-48">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I have to buy the training add-on?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                No. The hiring package is completely standalone. The training add-on is optional but recommended if you want your VA ready with zero ramp-up time. Many clients add it after they've completed their placement call and seen the onboarding scope.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              When does the $1,000 introductory pricing end?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Founding member pricing is capped at the first 10 clients. When those spots fill, the price goes up — no exceptions. The progress bar on the pricing card reflects the current number of spots remaining. Once they're gone, they're gone.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you work with clients outside Portland?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Yes. We're based in Portland, OR but we place VAs for clients across the country. All placements are remote, so location is never a barrier. Time zone alignment is part of our matching criteria regardless of where you're located.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What if I need more than one VA?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Each placement is a separate hiring package. If you're placing two or more VAs at once, reach out directly — we offer multi-placement pricing for teams and agencies. Book a call and we'll put together a custom quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How does the 30-day guarantee actually work?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                If you're not satisfied with your placement within the first 30 days — for any reason — contact us and we restart the entire process: new sourcing, new vetting, new shortlist. There's no fee, no fine print, and no awkward negotiation. We want you to end up with the right VA, full stop.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What does the VA get paid — and do I pay you for that?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                You negotiate and pay your VA directly at whatever rate you agree to. We don't take a percentage of their salary, we don't add a markup, and we don't invoice you monthly for the ongoing employment relationship. Our fee is the one-time placement fee — nothing more.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ BOTTOM CTA ════════════════════════════════════════ -->
+    <section class="section cta-section" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-section__inner">
+          <span class="section-label" style="color:rgba(255,255,255,0.4);">Get Started</span>
+          <h2>Start with a free needs assessment.</h2>
+          <p>20 minutes. We'll figure out what you need, what role to hire for, and whether founding member pricing is still available.</p>
+          <div class="cta-section__actions">
+            <a href="book-a-call.html" class="btn btn-primary btn-lg">Book a Free Needs Assessment →</a>
+            <a href="how-it-works.html" class="btn btn-outline-white btn-lg">See How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="Hireflow VA">
+            <div class="footer__logo-mark" aria-hidden="true">HF</div>
+            <span class="footer__logo-name">Hireflow VA</span>
+          </a>
+          <p class="footer__desc">Trained virtual assistants. Placed, launched, and guaranteed. Your partner in matching virtual talent.</p>
+          <div class="footer__location" aria-label="Location">
+            <span aria-hidden="true">📍</span> Portland, OR
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html"        class="footer__link">About Us</a></li>
+            <li><a href="how-it-works.html" class="footer__link">How It Works</a></li>
+            <li><a href="pricing.html"      class="footer__link">Pricing</a></li>
+            <li><a href="book-a-call.html"  class="footer__link">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Pricing</div>
+          <ul class="footer__links">
+            <li><a href="#plans"     class="footer__link">Hiring Package</a></li>
+            <li><a href="#plans"     class="footer__link">Training Add-On</a></li>
+            <li><a href="#plans"     class="footer__link">Ongoing Education</a></li>
+            <li><a href="#guarantee" class="footer__link">30-Day Guarantee</a></li>
+            <li><a href="#faq"       class="footer__link">Pricing FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">🌐</div>
+              <span>hireflowva.com</span>
+            </div>
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">📍</div>
+              <span>Portland, OR</span>
+            </div>
+          </div>
+          <div class="mt-24">
+            <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="year">2025</span> Hireflow VA. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Free VA Needs Assessment — Hireflow VA | Portland, OR</title>
+  <meta name="description" content="Schedule a free 20-minute needs assessment with Hireflow VA. No pitch — just a plan for getting the right VA placed in your business." />
+  <meta name="keywords" content="book VA consultation, free needs assessment, virtual assistant Portland OR, hire VA call, Hireflow VA booking" />
+  <meta name="author" content="Hireflow VA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book a Free VA Needs Assessment — Hireflow VA" />
+  <meta property="og:description" content="20 minutes. No pitch. Just a plan for getting the right VA placed in your business." />
+  <meta property="og:url" content="https://hireflowva.com/book-a-call.html" />
+  <meta property="og:site_name" content="Hireflow VA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book a Free VA Needs Assessment — Hireflow VA" />
+  <meta name="twitter:description" content="20 minutes. No pitch. Just a plan." />
+  <link rel="canonical" href="https://hireflowva.com/book-a-call.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300C2B5'/><text x='5' y='24' font-size='20' font-weight='800' fill='white' font-family='system-ui'>H</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* Main two-column layout */
+    .book-page-layout {
+      display: grid;
+      gap: 56px;
+      align-items: start;
+    }
+
+    @media (min-width: 960px) {
+      .book-page-layout {
+        grid-template-columns: 1fr 520px;
+        gap: 80px;
+      }
+    }
+
+    /* Left column — context */
+    .book-context { }
+
+    .book-intro {
+      font-size: 1.05rem;
+      color: var(--dark-navy);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+
+    /* What to expect */
+    .expect-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .expect-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .expect-check {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--light-teal);
+      border: 2px solid rgba(0,194,181,0.3);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .expect-text {
+      font-size: 0.95rem;
+      color: var(--dark-navy);
+      line-height: 1.6;
+      padding-top: 4px;
+    }
+
+    /* Trust mini-cards */
+    .trust-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .trust-mini {
+      background: var(--light-teal);
+      border: 1px solid rgba(0,194,181,0.2);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .trust-mini__icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .trust-mini__label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .trust-mini__sub {
+      font-size: 0.73rem;
+      color: var(--mid-gray);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* Testimonial pull-quote */
+    .book-quote {
+      background: var(--dark-navy);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 7rem;
+      font-family: var(--font-heading);
+      color: rgba(0,194,181,0.12);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .book-quote__text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .book-quote__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .book-quote__avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), #008f84);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .book-quote__name  { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+    .book-quote__role  { font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+
+    /* Right column — embed + contact */
+    .book-right { display: flex; flex-direction: column; gap: 28px; }
+
+    /* Booking embed container */
+    .booking-embed-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0,0,0,0.07);
+      overflow: hidden;
+    }
+
+    .booking-embed-header {
+      background: var(--dark-navy);
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .booking-embed-header__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: rgba(0,194,181,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .booking-embed-header__title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      font-family: var(--font-heading);
+    }
+
+    .booking-embed-header__sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 2px;
+    }
+
+    /* ── Booking embed placeholder ──────────────────────────── */
+    #booking-embed {
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 2.5px dashed var(--teal);
+      margin: 24px;
+      border-radius: var(--radius-md);
+      background: var(--light-teal);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    #booking-embed__calendar-icon {
+      font-size: 2.8rem;
+      opacity: 0.6;
+    }
+
+    #booking-embed__label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #008f84;
+    }
+
+    #booking-embed__hint {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      font-family: 'Courier New', monospace;
+      background: rgba(0,0,0,0.04);
+      padding: 6px 14px;
+      border-radius: 4px;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      border: 1.5px solid rgba(0,0,0,0.07);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-card h3 {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: var(--dark-navy);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-row + .contact-row {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .contact-row__icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--light-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: var(--teal);
+    }
+
+    .contact-row__label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 2px;
+    }
+
+    .contact-row__value {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--dark-navy);
+    }
+
+    .contact-row__value a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    .contact-row__value a:hover { color: var(--teal); }
+
+    /* Founding spots reminder */
+    .founding-reminder {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: var(--radius-md);
+      padding: 22px 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .founding-reminder__icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .founding-reminder__text {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+    }
+
+    .founding-reminder__text strong {
+      color: var(--teal);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Hireflow VA — Home">
+            <div class="nav__logo-mark" aria-hidden="true">HF</div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">Hireflow VA</span>
+              <span class="nav__logo-sub">Portland, OR</span>
+            </div>
+          </a>
+
+          <div class="nav__links" role="list">
+            <a href="index.html"         class="nav__link" role="listitem">Home</a>
+            <a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+            <a href="pricing.html"       class="nav__link" role="listitem">Pricing</a>
+            <a href="about.html"         class="nav__link" role="listitem">About</a>
+            <a href="book-a-call.html"   class="btn btn-primary nav__cta" role="listitem">Book a Free Call</a>
+          </div>
+
+          <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav__mobile" id="mobileMenu" role="list">
+        <a href="index.html"         class="nav__mobile-link" role="listitem">Home</a>
+        <a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+        <a href="pricing.html"       class="nav__mobile-link" role="listitem">Pricing</a>
+        <a href="about.html"         class="nav__mobile-link" role="listitem">About</a>
+        <a href="book-a-call.html"   class="btn btn-primary" role="listitem">Book a Free Call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="section-label">Free Needs Assessment</span>
+          <h1 class="fade-up">20 minutes. No pitch. Just a plan.</h1>
+          <p class="fade-up-2">Tell us about your business and what you're trying to get off your plate. We'll map out the role, the timeline, and whether founding member pricing is still available.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ MAIN BOOKING LAYOUT ════════════════════════════════ -->
+    <section class="section" aria-labelledby="booking-heading">
+      <div class="container">
+        <div class="book-page-layout">
+
+          <!-- LEFT — context, expectations, trust -->
+          <div class="book-context">
+
+            <span class="section-label">On This Call</span>
+            <h2 id="booking-heading" class="section-heading" style="margin-bottom:16px;">What to expect</h2>
+            <div class="divider"></div>
+
+            <p class="book-intro">
+              This isn't a sales call. It's a working session. We'll spend 20 minutes understanding your business and leave you with a concrete picture of what your VA should handle — and how fast we can make it happen.
+            </p>
+
+            <ul class="expect-list" aria-label="What happens on the call">
+              <li class="expect-item">
+                <div class="expect-check" aria-hidden="true">✓</div>
+                <span class="expect-text">We'll learn about your business, your role, and your workflows</span>
+              </li>
+              <li class="expect-item">
+                <div class="expect-check" aria-hidden="true">✓</div>
+                <span class="expect-text">We'll identify the highest-leverage tasks to hand off first</span>
+              </li>
+              <li class="expect-item">
+                <div class="expect-check" aria-hidden="true">✓</div>
+                <span class="expect-text">We'll walk you through the Hireflow VA process and timeline</span>
+              </li>
+              <li class="expect-item">
+                <div class="expect-check" aria-hidden="true">✓</div>
+                <span class="expect-text">You'll leave with a clear plan — whether or not you move forward with us</span>
+              </li>
+            </ul>
+
+            <!-- Trust mini-grid -->
+            <div class="trust-mini-grid" aria-label="Booking reassurances">
+              <div class="trust-mini">
+                <span class="trust-mini__icon" aria-hidden="true">⏱</span>
+                <div>
+                  <div class="trust-mini__label">20 minutes</div>
+                  <div class="trust-mini__sub">Focused and efficient</div>
+                </div>
+              </div>
+              <div class="trust-mini">
+                <span class="trust-mini__icon" aria-hidden="true">🚫</span>
+                <div>
+                  <div class="trust-mini__label">No pitch</div>
+                  <div class="trust-mini__sub">Zero pressure to buy</div>
+                </div>
+              </div>
+              <div class="trust-mini">
+                <span class="trust-mini__icon" aria-hidden="true">🛡</span>
+                <div>
+                  <div class="trust-mini__label">30-day guarantee</div>
+                  <div class="trust-mini__sub">On every placement</div>
+                </div>
+              </div>
+              <div class="trust-mini">
+                <span class="trust-mini__icon" aria-hidden="true">📍</span>
+                <div>
+                  <div class="trust-mini__label">Real person</div>
+                  <div class="trust-mini__sub">Portland, OR based</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pull quote -->
+            <blockquote class="book-quote">
+              <p class="book-quote__text">
+                The discovery call was the easiest part of the whole process. 20 minutes and I had a clearer picture of what I actually needed than I'd had in six months of trying to figure it out myself.
+              </p>
+              <div class="book-quote__author">
+                <div class="book-quote__avatar" aria-hidden="true">LT</div>
+                <div>
+                  <div class="book-quote__name">Leah T.</div>
+                  <div class="book-quote__role">Founder, Summit Coaching Co.</div>
+                </div>
+              </div>
+            </blockquote>
+
+          </div>
+
+          <!-- RIGHT — embed + contact -->
+          <div class="book-right">
+
+            <!-- Founding spots reminder -->
+            <div class="founding-reminder" role="note" aria-label="Founding pricing notice">
+              <span class="founding-reminder__icon" aria-hidden="true">⚡</span>
+              <div class="founding-reminder__text">
+                <strong>Founding member pricing ($1,000) is capped at 10 clients.</strong> Only 3 spots remain. Book your call to lock in the rate before they're gone.
+              </div>
+            </div>
+
+            <!-- Booking embed card -->
+            <div class="booking-embed-wrap" aria-label="Booking calendar">
+              <div class="booking-embed-header">
+                <div class="booking-embed-header__icon" aria-hidden="true">📅</div>
+                <div>
+                  <div class="booking-embed-header__title">Free 20-Minute Needs Assessment</div>
+                  <div class="booking-embed-header__sub">Hireflow VA · Portland, OR · hireflowva.com</div>
+                </div>
+              </div>
+
+              <!-- ════════════════════════════════════════════════
+                   Paste your Calendly embed code here
+              ════════════════════════════════════════════════ -->
+              <div id="booking-embed" aria-label="Booking calendar placeholder">
+                <span id="booking-embed__calendar-icon" aria-hidden="true">📅</span>
+                <span id="booking-embed__label">Booking calendar loads here</span>
+                <span id="booking-embed__hint">&lt;!-- Paste your Calendly embed code here --&gt;</span>
+              </div>
+
+            </div>
+
+            <!-- Direct contact card -->
+            <div class="contact-card" aria-labelledby="contact-heading">
+              <h3 id="contact-heading">Prefer to reach out directly?</h3>
+
+              <div class="contact-row">
+                <div class="contact-row__icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="contact-row__label">Email</div>
+                  <div class="contact-row__value">
+                    <a href="mailto:sophia@investwithrama.co">sophia@investwithrama.co</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-row__icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="contact-row__label">Based in</div>
+                  <div class="contact-row__value">Portland, OR — placing VAs nationwide</div>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-row__icon" aria-hidden="true">🌐</div>
+                <div>
+                  <div class="contact-row__label">Website</div>
+                  <div class="contact-row__value">
+                    <a href="https://hireflowva.com" target="_blank" rel="noopener">hireflowva.com</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ REASSURANCE STRIP ══════════════════════════════════ -->
+    <section class="section--sm bg-light" aria-label="Final reassurances">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;align-items:center;">
+
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;font-weight:600;color:var(--navy);">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:0.8rem;flex-shrink:0;" aria-hidden="true">✓</div>
+            No commitment required
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;font-weight:600;color:var(--navy);">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:0.8rem;flex-shrink:0;" aria-hidden="true">✓</div>
+            You'll leave with clarity, regardless
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;font-weight:600;color:var(--navy);">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:0.8rem;flex-shrink:0;" aria-hidden="true">✓</div>
+            30-day fit guarantee on every placement
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem;font-weight:600;color:var(--navy);">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:0.8rem;flex-shrink:0;" aria-hidden="true">✓</div>
+            Founding pricing: only 3 spots left
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="Hireflow VA">
+            <div class="footer__logo-mark" aria-hidden="true">HF</div>
+            <span class="footer__logo-name">Hireflow VA</span>
+          </a>
+          <p class="footer__desc">Trained virtual assistants. Placed, launched, and guaranteed. Your partner in matching virtual talent.</p>
+          <div class="footer__location" aria-label="Location">
+            <span aria-hidden="true">📍</span> Portland, OR
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html"        class="footer__link">About Us</a></li>
+            <li><a href="how-it-works.html" class="footer__link">How It Works</a></li>
+            <li><a href="pricing.html"      class="footer__link">Pricing</a></li>
+            <li><a href="book-a-call.html"  class="footer__link">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Quick Links</div>
+          <ul class="footer__links">
+            <li><a href="pricing.html#guarantee" class="footer__link">30-Day Guarantee</a></li>
+            <li><a href="pricing.html#plans"     class="footer__link">Pricing Plans</a></li>
+            <li><a href="how-it-works.html#process" class="footer__link">Our Process</a></li>
+            <li><a href="about.html#story"       class="footer__link">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">✉️</div>
+              <a href="mailto:sophia@investwithrama.co" style="color:rgba(255,255,255,0.55);transition:color 0.25s ease;" onmouseover="this.style.color='#00C2B5'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">sophia@investwithrama.co</a>
+            </div>
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">🌐</div>
+              <span>hireflowva.com</span>
+            </div>
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">📍</div>
+              <span>Portland, OR</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">hireflowva.com &bull; Portland, OR &bull; © <span id="year">2025</span> Hireflow VA. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

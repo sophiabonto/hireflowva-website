@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Hireflow VA Works — Done-For-You VA Hiring Process</title>
+  <meta name="description" content="See exactly how Hireflow VA sources, vets, tests, and trains your virtual assistant. 6 simple steps from needs assessment to placement. 30-day fit guarantee included." />
+  <meta name="keywords" content="VA hiring process, virtual assistant placement, how it works, VA vetting, onboarding virtual assistant, Hireflow VA" />
+  <meta name="author" content="Hireflow VA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How Hireflow VA Works — Done-For-You VA Hiring Process" />
+  <meta property="og:description" content="6 simple steps from needs assessment to placement. We handle sourcing, vetting, testing, and training — you just pick your person." />
+  <meta property="og:url" content="https://hireflowva.com/how-it-works.html" />
+  <meta property="og:site_name" content="Hireflow VA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How Hireflow VA Works — Done-For-You Hiring" />
+  <meta name="twitter:description" content="6 steps. We do the hard part. You make one decision." />
+  <link rel="canonical" href="https://hireflowva.com/how-it-works.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300C2B5'/><text x='5' y='24' font-size='20' font-weight='800' fill='white' font-family='system-ui'>H</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Page-specific overrides ─────────────────────────────── */
+
+    /* Process timeline connector line on desktop */
+    .process-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    @media (min-width: 900px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .process-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1.5px solid rgba(0, 0, 0, 0.07);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: transparent;
+      transition: background var(--transition);
+    }
+
+    .process-card:hover {
+      border-color: rgba(0, 194, 181, 0.35);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .process-card:hover::before {
+      background: var(--teal);
+    }
+
+    .process-card--guarantee {
+      border-color: rgba(0, 194, 181, 0.3);
+      background: var(--light-teal);
+    }
+
+    .process-card--guarantee::before {
+      background: var(--teal);
+    }
+
+    .process-card--guarantee:hover {
+      border-color: var(--teal);
+      background: var(--light-teal);
+    }
+
+    .process-num {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: var(--dark-navy);
+      color: var(--teal);
+      font-size: 1.25rem;
+      font-weight: 900;
+      font-family: var(--font-heading);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .process-card--guarantee .process-num {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .process-body { flex: 1; min-width: 0; }
+
+    .process-body h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      color: var(--dark-navy);
+    }
+
+    .process-body p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--mid-gray);
+    }
+
+    .process-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    /* ── "What you don't have to do" section ─────────────────── */
+    .off-list-section { background: var(--dark-navy); }
+
+    .off-list-grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 860px) {
+      .off-list-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+    }
+
+    .off-list__heading { color: var(--white); }
+    .off-list__sub     { color: rgba(255, 255, 255, 0.55); margin-bottom: 0; }
+
+    .off-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .off-list__item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background var(--transition);
+    }
+
+    .off-list__item:last-child { border-bottom: none; }
+    .off-list__item:hover      { background: rgba(0, 194, 181, 0.06); }
+
+    .off-list__cross {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 59, 48, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff6b6b;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .off-list__text {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .off-list__strikethrough {
+      text-decoration: line-through;
+      text-decoration-color: rgba(255, 107, 107, 0.5);
+      text-decoration-thickness: 1.5px;
+    }
+
+    /* ── Guarantee callout banner ────────────────────────────── */
+    .guarantee-banner {
+      background: linear-gradient(135deg, var(--teal) 0%, #008f84 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 48px;
+    }
+
+    .guarantee-banner__icon {
+      font-size: 2.8rem;
+      flex-shrink: 0;
+    }
+
+    .guarantee-banner__text { flex: 1; min-width: 200px; }
+    .guarantee-banner__text h3 { color: var(--white); margin-bottom: 6px; }
+    .guarantee-banner__text p  { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; margin: 0; }
+
+    /* ── Intro split layout ──────────────────────────────────── */
+    .intro-split {
+      display: grid;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 860px) {
+      .intro-split { grid-template-columns: 1fr 420px; gap: 80px; }
+    }
+
+    .intro-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .intro-metric {
+      background: var(--light-teal);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1px solid rgba(0, 194, 181, 0.2);
+      text-align: center;
+    }
+
+    .intro-metric__value {
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .intro-metric__label {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .intro-metric--accent {
+      background: var(--navy);
+      border-color: transparent;
+      grid-column: span 2;
+    }
+
+    .intro-metric--accent .intro-metric__value { color: var(--teal); }
+    .intro-metric--accent .intro-metric__label { color: rgba(255, 255, 255, 0.5); }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Hireflow VA — Home">
+            <div class="nav__logo-mark" aria-hidden="true">HF</div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">Hireflow VA</span>
+              <span class="nav__logo-sub">Portland, OR</span>
+            </div>
+          </a>
+
+          <div class="nav__links" role="list">
+            <a href="index.html"         class="nav__link" role="listitem">Home</a>
+            <a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+            <a href="pricing.html"       class="nav__link" role="listitem">Pricing</a>
+            <a href="about.html"         class="nav__link" role="listitem">About</a>
+            <a href="book-a-call.html"   class="btn btn-primary nav__cta" role="listitem">Book a Free Call</a>
+          </div>
+
+          <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav__mobile" id="mobileMenu" role="list">
+        <a href="index.html"         class="nav__mobile-link" role="listitem">Home</a>
+        <a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+        <a href="pricing.html"       class="nav__mobile-link" role="listitem">Pricing</a>
+        <a href="about.html"         class="nav__mobile-link" role="listitem">About</a>
+        <a href="book-a-call.html"   class="btn btn-primary" role="listitem">Book a Free Call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Page introduction">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="section-label">The Process</span>
+          <h1 class="fade-up">We do the hard part.<br>You make one decision.</h1>
+          <p class="fade-up-2">Most business owners know they need help. They just don't have the time to hire, vet, or train anyone. That's the exact problem we solve.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ INTRO SPLIT ════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-split">
+
+          <div>
+            <span class="section-label">Why It Matters</span>
+            <h2 class="section-heading" id="intro-heading">The Full Pipeline, Done for You</h2>
+            <div class="divider"></div>
+            <p style="font-size:1.05rem; color:var(--dark-navy); line-height:1.75; margin-bottom:20px;">
+              Hireflow VA runs the entire hiring pipeline from start to placed — so the only thing you have to do is pick your person from a shortlist we've already built.
+            </p>
+            <p>
+              We handle sourcing, screening, skills testing, interviewing, and onboarding. You get a curated shortlist of two or three candidates who have already passed every filter. You interview. You decide. We handle the rest.
+            </p>
+            <div class="mt-32">
+              <a href="book-a-call.html" class="btn btn-primary">Start with a Free Call</a>
+            </div>
+          </div>
+
+          <div class="intro-metrics" aria-label="Key process metrics">
+            <div class="intro-metric">
+              <div class="intro-metric__value">100–200+</div>
+              <div class="intro-metric__label">Applicants We Filter</div>
+            </div>
+            <div class="intro-metric">
+              <div class="intro-metric__value">2–3</div>
+              <div class="intro-metric__label">Candidates You See</div>
+            </div>
+            <div class="intro-metric">
+              <div class="intro-metric__value">14 days</div>
+              <div class="intro-metric__label">Avg. Time to Placement</div>
+            </div>
+            <div class="intro-metric">
+              <div class="intro-metric__value">97%</div>
+              <div class="intro-metric__label">Client Satisfaction</div>
+            </div>
+            <div class="intro-metric intro-metric--accent">
+              <div class="intro-metric__value">30-Day</div>
+              <div class="intro-metric__label">Fit Guarantee on Every Placement</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ 6-STEP PROCESS ════════════════════════════════════ -->
+    <section class="section bg-light" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="centered">
+          <span class="section-label">Step by Step</span>
+          <h2 class="section-heading" id="process-heading">6 Steps from Assessment to Placed</h2>
+          <p class="section-sub">Every placement follows the same proven pipeline — no shortcuts, no guesswork.</p>
+        </div>
+
+        <div class="process-grid mt-48">
+
+          <!-- Step 1 -->
+          <div class="process-card" id="matching">
+            <div class="process-num" aria-hidden="true">01</div>
+            <div class="process-body">
+              <div class="process-tag">
+                <span aria-hidden="true">📋</span> Discovery
+              </div>
+              <h3>Free Needs Assessment</h3>
+              <p>We spend 20 minutes learning your business: role requirements, tools, workflows, communication style, and what success looks like. This call shapes everything that comes after.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card">
+            <div class="process-num" aria-hidden="true">02</div>
+            <div class="process-body">
+              <div class="process-tag">
+                <span aria-hidden="true">🔍</span> Sourcing
+              </div>
+              <h3>Sourcing &amp; Posting</h3>
+              <p>We post your role across top VA platforms and filter through 100–200+ applicants using your exact criteria. You don't see a single unvetted resume — ever.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card">
+            <div class="process-num" aria-hidden="true">03</div>
+            <div class="process-body">
+              <div class="process-tag">
+                <span aria-hidden="true">✅</span> Vetting
+              </div>
+              <h3>Skills Assessment</h3>
+              <p>Every candidate completes a real skills test built around the actual tasks your role requires — not generic aptitude quizzes. We score, rank, and advance only those who meet the bar.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card">
+            <div class="process-num" aria-hidden="true">04</div>
+            <div class="process-body">
+              <div class="process-tag">
+                <span aria-hidden="true">🎙</span> Shortlist
+              </div>
+              <h3>Interview &amp; Shortlist</h3>
+              <p>We conduct screening interviews and send you a curated shortlist of 2–3 finalists. You hold one conversation per candidate — then pick your person. That's your only job.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-card" id="onboarding">
+            <div class="process-num" aria-hidden="true">05</div>
+            <div class="process-body">
+              <div class="process-tag">
+                <span aria-hidden="true">🚀</span> Onboarding
+              </div>
+              <h3>Training Add-On</h3>
+              <p>4 structured training sessions custom-built to your tools and workflows. Day one is productive, not a learning curve. Your VA arrives knowing your systems, not just a résumé.</p>
+            </div>
+          </div>
+
+          <!-- Step 6 — guarantee (accented) -->
+          <div class="process-card process-card--guarantee" id="support">
+            <div class="process-num" aria-hidden="true">06</div>
+            <div class="process-body">
+              <div class="process-tag" style="color: #008f84;">
+                <span aria-hidden="true">🛡</span> Guarantee
+              </div>
+              <h3>30-Day Fit Guarantee</h3>
+              <p>Not the right fit within 30 days? We re-run the entire process at no extra cost. No questions, no friction — just a seamless rematch so your business keeps moving.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Guarantee banner -->
+        <div class="guarantee-banner" aria-label="Guarantee highlight">
+          <div class="guarantee-banner__icon" aria-hidden="true">🛡</div>
+          <div class="guarantee-banner__text">
+            <h3>The 30-Day Fit Guarantee</h3>
+            <p>Every placement is backed by our guarantee. If the match isn't right within 30 days, we restart the full process — sourcing, vetting, shortlisting — at zero additional cost to you.</p>
+          </div>
+          <a href="book-a-call.html" class="btn btn-navy btn-lg" style="flex-shrink:0;">Claim Your Guarantee</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ WHAT YOU DON'T HAVE TO DO ════════════════════════ -->
+    <section class="section off-list-section" id="sops" aria-labelledby="offlist-heading">
+      <div class="container">
+        <div class="off-list-grid">
+
+          <div>
+            <span class="section-label" style="color:rgba(255,255,255,0.4);">The Difference</span>
+            <h2 class="section-heading off-list__heading" id="offlist-heading">What You Don't Have to Do</h2>
+            <div class="divider"></div>
+            <p class="off-list__sub" style="margin-bottom:24px;">
+              Traditional hiring is a part-time job on top of your real job. We eliminate every step that would normally land on your plate — so you stay focused on running your business.
+            </p>
+            <p class="off-list__sub">
+              From writing the listing to crafting the offer to building an onboarding plan, we own the full process. You show up for one interview. We handle everything before and after.
+            </p>
+            <div class="mt-32">
+              <a href="pricing.html" class="btn btn-outline-white">See Pricing →</a>
+            </div>
+          </div>
+
+          <ul class="off-list" aria-label="Tasks we handle so you don't have to">
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Write or post a job listing</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Sort through hundreds of applicants</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Build or send a skills assessment</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Schedule and conduct screening interviews</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Write a job offer or contractor agreement</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Create an onboarding or training plan</span></span>
+            </li>
+            <li class="off-list__item">
+              <div class="off-list__cross" aria-hidden="true">✕</div>
+              <span class="off-list__text"><span class="off-list__strikethrough">Wonder if you hired the right person</span></span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ COMPARISON STRIP ══════════════════════════════════ -->
+    <section class="section" aria-labelledby="compare-heading">
+      <div class="container">
+        <div class="centered">
+          <span class="section-label">DIY vs. Hireflow</span>
+          <h2 class="section-heading" id="compare-heading">Hiring a VA Alone vs. With Us</h2>
+          <p class="section-sub">The difference is time, certainty, and what you never have to learn.</p>
+        </div>
+
+        <div class="grid-2 mt-48" style="max-width:820px;margin-inline:auto;gap:24px;">
+
+          <div class="card" style="border-color:rgba(255,59,48,0.15);background:#fff9f9;">
+            <div style="font-size:1.5rem;margin-bottom:14px;" aria-hidden="true">😩</div>
+            <h3 style="color:var(--dark-navy);margin-bottom:16px;">Hiring Alone</h3>
+            <ul style="display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--mid-gray);">
+                <span style="color:#ff6b6b;font-weight:700;margin-top:1px;" aria-hidden="true">✕</span>
+                10–20 hours of your time to post, filter, and interview
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--mid-gray);">
+                <span style="color:#ff6b6b;font-weight:700;margin-top:1px;" aria-hidden="true">✕</span>
+                No skills testing — you guess based on a résumé
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--mid-gray);">
+                <span style="color:#ff6b6b;font-weight:700;margin-top:1px;" aria-hidden="true">✕</span>
+                4–8 week average time to fill the role
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--mid-gray);">
+                <span style="color:#ff6b6b;font-weight:700;margin-top:1px;" aria-hidden="true">✕</span>
+                No onboarding structure — hope they figure it out
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--mid-gray);">
+                <span style="color:#ff6b6b;font-weight:700;margin-top:1px;" aria-hidden="true">✕</span>
+                Bad hire costs you weeks and thousands of dollars
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card--teal" style="border-color:rgba(0,194,181,0.3);">
+            <div style="font-size:1.5rem;margin-bottom:14px;" aria-hidden="true">✨</div>
+            <h3 style="margin-bottom:16px;">With Hireflow VA</h3>
+            <ul style="display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--dark-navy);">
+                <span style="color:var(--teal);font-weight:700;margin-top:1px;" aria-hidden="true">✓</span>
+                20-minute call — we handle everything else
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--dark-navy);">
+                <span style="color:var(--teal);font-weight:700;margin-top:1px;" aria-hidden="true">✓</span>
+                Role-specific skills tests on every candidate
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--dark-navy);">
+                <span style="color:var(--teal);font-weight:700;margin-top:1px;" aria-hidden="true">✓</span>
+                Placed in 7–14 business days on average
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--dark-navy);">
+                <span style="color:var(--teal);font-weight:700;margin-top:1px;" aria-hidden="true">✓</span>
+                Structured onboarding built around your systems
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.88rem;color:var(--dark-navy);">
+                <span style="color:var(--teal);font-weight:700;margin-top:1px;" aria-hidden="true">✓</span>
+                30-day fit guarantee — zero-cost rematch if needed
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA ══════════════════════════════════════════════ -->
+    <section class="section cta-section" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-section__inner">
+          <span class="section-label" style="color:rgba(255,255,255,0.4);">Get Started</span>
+          <h2>Ready to start?</h2>
+          <p>Book a free 20-minute needs assessment. We'll map out your role, timeline, and exactly what your VA will handle — no commitment required.</p>
+          <div class="cta-section__actions">
+            <a href="book-a-call.html" class="btn btn-primary btn-lg">Book a Free Needs Assessment →</a>
+            <a href="pricing.html" class="btn btn-outline-white btn-lg">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="Hireflow VA">
+            <div class="footer__logo-mark" aria-hidden="true">HF</div>
+            <span class="footer__logo-name">Hireflow VA</span>
+          </a>
+          <p class="footer__desc">Trained virtual assistants. Placed, launched, and guaranteed. Your partner in matching virtual talent.</p>
+          <div class="footer__location" aria-label="Location">
+            <span aria-hidden="true">📍</span> Portland, OR
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html"        class="footer__link">About Us</a></li>
+            <li><a href="how-it-works.html" class="footer__link">How It Works</a></li>
+            <li><a href="pricing.html"      class="footer__link">Pricing</a></li>
+            <li><a href="book-a-call.html"  class="footer__link">Book a Call</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Process</div>
+          <ul class="footer__links">
+            <li><a href="#matching"   class="footer__link">Needs Assessment</a></li>
+            <li><a href="#process"    class="footer__link">Sourcing &amp; Vetting</a></li>
+            <li><a href="#onboarding" class="footer__link">Training Add-On</a></li>
+            <li><a href="#support"    class="footer__link">30-Day Guarantee</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">🌐</div>
+              <span>hireflowva.com</span>
+            </div>
+            <div class="footer__contact-item">
+              <div class="footer__contact-icon" aria-hidden="true">📍</div>
+              <span>Portland, OR</span>
+            </div>
+          </div>
+          <div class="mt-24">
+            <a href="book-a-call.html" class="btn btn-primary btn-sm">Book a Call</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span id="year">2025</span> Hireflow VA. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
