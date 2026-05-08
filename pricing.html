@@ -30,7 +30,7 @@
 
     @media (min-width: 860px) {
       .pricing-trio {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         align-items: stretch;
       }
     }
@@ -219,11 +219,7 @@
       <div class="container">
         <div class="nav__inner">
           <a href="index.html" class="nav__logo" aria-label="Hireflow VA — Home">
-            <div class="nav__logo-mark" aria-hidden="true">HF</div>
-            <div class="nav__logo-text">
-              <span class="nav__logo-name">Hireflow VA</span>
-              <span class="nav__logo-sub">Portland, OR</span>
-            </div>
+            <img src="logo.png" alt="Hireflow VA" style="height: 80px;">
           </a>
 
           <div class="nav__links" role="list">
@@ -318,7 +314,7 @@
           </div>
 
           <!-- Card 2 — Training Add-On -->
-          <div class="plan-card" aria-label="Training Add-On">
+          <div class="plan-card" style="position:relative;" aria-label="Training Add-On">
             <div class="plan-badge" style="background:var(--navy);position:absolute;top:-14px;left:50%;transform:translateX(-50%);">Optional Add-On</div>
 
             <div class="plan-name" style="margin-top:8px;">Training Add-On</div>
@@ -384,6 +380,39 @@
             </ul>
 
             <a href="book-a-call.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+          </div>
+
+          <!-- Card 4 — Team / Custom -->
+          <div class="plan-card" style="position:relative;" aria-label="Team / Custom">
+            <div class="plan-badge" style="background:var(--dark-navy);position:absolute;top:-14px;left:50%;transform:translateX(-50%);">Volume Pricing</div>
+
+            <div class="plan-name" style="margin-top:8px;">Team / Custom</div>
+            <div class="plan-price">
+              <span class="plan-price__amount" style="font-size:2.2rem;">Custom</span>
+            </div>
+            <div class="plan-price__period">get a quote</div>
+            <p class="plan-desc mt-16">Placing multiple VAs or building out a remote team? Let's talk.</p>
+
+            <ul class="plan-features">
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Custom pricing for multiple VAs</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>White-glove coordination across your team</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Dedicated account management</span>
+              </li>
+              <li class="plan-feature">
+                <div class="plan-feature__check" aria-hidden="true">✓</div>
+                <span>Priority placement and support</span>
+              </li>
+            </ul>
+
+            <a href="book-a-call.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get a Custom Quote</a>
           </div>
 
         </div>
@@ -471,7 +500,7 @@
                 <td><span class="dash" aria-label="Not included">—</span></td>
               </tr>
               <tr>
-                <td>Curated shortlist (2–3 candidates)</td>
+                <td>Curated shortlist (3–5 candidates)</td>
                 <td><span class="check" aria-label="Included">✓</span></td>
                 <td><span class="dash" aria-label="Not included">—</span></td>
                 <td><span class="dash" aria-label="Not included">—</span></td>
@@ -649,13 +678,9 @@
 
         <div class="footer__brand">
           <a href="index.html" class="footer__logo" aria-label="Hireflow VA">
-            <div class="footer__logo-mark" aria-hidden="true">HF</div>
-            <span class="footer__logo-name">Hireflow VA</span>
+            <img src="logo.png" alt="Hireflow VA" style="height: 200px;">
           </a>
           <p class="footer__desc">Trained virtual assistants. Placed, launched, and guaranteed. Your partner in matching virtual talent.</p>
-          <div class="footer__location" aria-label="Location">
-            <span aria-hidden="true">📍</span> Portland, OR
-          </div>
         </div>
 
         <div>
@@ -685,10 +710,6 @@
             <div class="footer__contact-item">
               <div class="footer__contact-icon" aria-hidden="true">🌐</div>
               <span>hireflowva.com</span>
-            </div>
-            <div class="footer__contact-item">
-              <div class="footer__contact-icon" aria-hidden="true">📍</div>
-              <span>Portland, OR</span>
             </div>
           </div>
           <div class="mt-24">
