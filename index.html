@@ -22,10 +22,11 @@
     .pricing-hero-card { border: 2px solid #00C2B5; border-radius: 20px; padding: 48px; max-width: 1100px; margin: 48px auto 40px; box-shadow: 0 16px 40px rgba(0,194,181,0.15); background: #fff; position: relative; }
     .pricing-hero-grid { display: flex; gap: 48px; align-items: flex-start; margin-top: 24px; flex-wrap: wrap; }
     .pricing-hero-info { flex: 1 1 300px; }
-   .pricing-hero-tiers { flex: 1 1 420px; display: flex; align-items: center; gap: 16px; }
-    .tier-block { flex: 1; background: rgba(0,194,181,0.07); border-radius: 12px; padding: 40px 14px; text-align: center; }
+ .pricing-hero-tiers { flex: 1 1 420px; display: flex; align-items: stretch; gap: 16px; }
+    .tier-block { flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: rgba(0,194,181,0.07); border-radius: 12px; padding: 32px 14px 20px; text-align: center; }
     .tier-price { font-size: 2.7rem; font-weight: 800; color: #1B3A6B; line-height: 1.1; white-space: nowrap; }
-    .tier-label { font-size: 0.9rem; color: var(--mid-gray); margin-top: 10px; line-height: 1.3; }
+    .tier-note { font-size: 0.85rem; color: var(--mid-gray); margin-top: 4px; }
+    .tier-range-badge { display: inline-block; margin-top: 20px; background: #00C2B5; color: #fff; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; padding: 8px 14px; border-radius: 999px; }
     .pricing-addons-row { display: flex; gap: 24px; max-width: 1100px; margin: 0 auto; align-items: stretch; }
     .pricing-addons-row .plan-card { flex: 1 1 0; display: flex; flex-direction: column; }
     .pricing-addons-row .plan-card > a.btn { margin-top: auto; }
@@ -417,17 +418,26 @@ src="https://www.facebook.com/tr?id=934873835009771&ev=PageView&noscript=1"
               <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;">Book a Free Call</a>
             </div>
             <div class="pricing-hero-tiers">
-              <div class="tier-block">
-                <div class="tier-price">$2,000</div>
-                <div class="tier-label">/ hire<br>1–2 VAs</div>
+            <div class="tier-block">
+                <div>
+                  <div class="tier-price">$2,000</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">1–2 VAs</div>
               </div>
               <div class="tier-block">
-                <div class="tier-price">$1,500</div>
-                <div class="tier-label">/ hire<br>3–5 VAs</div>
+                <div>
+                  <div class="tier-price">$1,500</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">3–5 VAs</div>
               </div>
               <div class="tier-block">
-                <div class="tier-price">$1,000</div>
-                <div class="tier-label">/ hire<br>6+ VAs</div>
+                <div>
+                  <div class="tier-price">$1,000</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">6+ VAs</div>
               </div>
             </div>
           </div>
