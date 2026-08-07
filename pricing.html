@@ -209,6 +209,25 @@
     .compare-table .addon  { font-size: 0.8rem; color: var(--teal); font-weight: 600; }
 
     .compare-table td:first-child { font-weight: 500; color: var(--dark-navy); }
+
+    /* Pricing hero card (landscape featured card) */
+    .pricing-hero-card { border: 2px solid #00C2B5; border-radius: 20px; padding: 48px; max-width: 1100px; margin: 0 auto 40px; box-shadow: 0 16px 40px rgba(0,194,181,0.15); background: #fff; position: relative; }
+    .pricing-hero-grid { display: flex; gap: 48px; align-items: flex-start; margin-top: 24px; flex-wrap: wrap; }
+    .pricing-hero-info { flex: 1 1 300px; }
+    .pricing-hero-cta { width: 100%; text-align: center; margin-top: 32px; }
+    .pricing-hero-tiers { flex: 1 1 420px; display: flex; align-items: stretch; gap: 16px; }
+    .tier-block { flex: 1; display: flex; flex-direction: column; justify-content: space-between; background: rgba(0,194,181,0.07); border-radius: 12px; padding: 32px 14px 20px; text-align: center; }
+    .tier-price { font-size: 2.7rem; font-weight: 800; color: #1B3A6B; line-height: 1.1; white-space: nowrap; }
+    .tier-note { font-size: 0.85rem; color: var(--mid-gray); margin-top: 4px; }
+    .tier-range-badge { display: inline-block; margin-top: 20px; background: #00C2B5; color: #fff; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; padding: 8px 14px; border-radius: 999px; }
+    .pricing-addons-row { display: flex; gap: 24px; max-width: 1100px; margin: 0 auto; align-items: stretch; }
+    .pricing-addons-row .plan-card { flex: 1 1 0; display: flex; flex-direction: column; }
+    .pricing-addons-row .plan-card > a.btn { margin-top: auto; }
+    @media (max-width: 860px) {
+      .pricing-hero-grid { flex-direction: column; }
+      .pricing-hero-tiers { flex-direction: column; }
+      .pricing-addons-row { flex-direction: column; }
+    }
   </style>
     <!-- Meta Pixel Code -->
 <script>
@@ -280,50 +299,60 @@ src="https://www.facebook.com/tr?id=934873835009771&ev=PageView&noscript=1"
     <section class="section" id="plans" aria-labelledby="plans-heading">
       <div class="container">
 
-        <div class="pricing-trio">
-
-          <!-- Card 1 — FEATURED: Hiring Package -->
-          <div class="plan-card plan-card--founding" style="position:relative;" aria-label="Hiring Package — Featured">
-            <div class="plan-badge">Hire Volume Pricing</div>
-
-            <div class="plan-name">Hiring Package</div>
-
-            <ul class="plan-features" style="margin-top:8px;">
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">$</div>
-                <span><strong>2,000</strong> / hire — 1–2 VAs</span>
-              </li>
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">$</div>
-                <span><strong>1,500</strong> / hire — 3–5 VAs</span>
-              </li>
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">$</div>
-                <span><strong>1,000</strong> / hire — 6+ VAs</span>
-              </li>
-            </ul>
-
-            <ul class="plan-features">
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">✓</div>
-                <span>End-to-end sourcing and vetting</span>
-              </li>
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">✓</div>
-                <span>Matched to your exact role and workflows</span>
-              </li>
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">✓</div>
-                <span>Placed within your business in 30 days or we re-run the search free</span>
-              </li>
-              <li class="plan-feature">
-                <div class="plan-feature__check" aria-hidden="true">✓</div>
-                <span>30-day fit guarantee — not working? We re-hire at no extra cost</span>
-              </li>
-            </ul>
-
+        <div class="pricing-hero-card">
+          <div class="plan-badge">Hire Volume Pricing</div>
+          <div class="pricing-hero-grid">
+            <div class="pricing-hero-info">
+              <div class="plan-name" style="font-size:1.6rem;">Hiring Package</div>
+              <ul class="plan-features" style="margin-top:16px;">
+                <li class="plan-feature">
+                  <div class="plan-feature__check" aria-hidden="true">✓</div>
+                  <span>End-to-end sourcing and vetting</span>
+                </li>
+                <li class="plan-feature">
+                  <div class="plan-feature__check" aria-hidden="true">✓</div>
+                  <span>Matched to your exact role and workflows</span>
+                </li>
+                <li class="plan-feature">
+                  <div class="plan-feature__check" aria-hidden="true">✓</div>
+                  <span>Placed within your business in 30 days or we re-run the search free</span>
+                </li>
+                <li class="plan-feature">
+                  <div class="plan-feature__check" aria-hidden="true">✓</div>
+                  <span>30-day fit guarantee — not working? We re-hire at no extra cost</span>
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-hero-tiers">
+              <div class="tier-block">
+                <div>
+                  <div class="tier-price">$2,000</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">1–2 VAs</div>
+              </div>
+              <div class="tier-block">
+                <div>
+                  <div class="tier-price">$1,500</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">3–5 VAs</div>
+              </div>
+              <div class="tier-block">
+                <div>
+                  <div class="tier-price">$1,000</div>
+                  <div class="tier-note">/ hire</div>
+                </div>
+                <div class="tier-range-badge">6+ VAs</div>
+              </div>
+            </div>
+          </div>
+          <div class="pricing-hero-cta">
             <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Free Call →</a>
           </div>
+        </div>
+
+        <div class="pricing-addons-row mt-32">
 
          <!-- Card 2 — Hireflow VA Academy -->
           <div class="plan-card" style="position:relative;" aria-label="Hireflow VA Academy">
