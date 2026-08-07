@@ -18,6 +18,23 @@
   <link rel="canonical" href="https://hireflow-va.com/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300C2B5'/><text x='5' y='24' font-size='20' font-weight='800' fill='white' font-family='system-ui'>H</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .pricing-hero-card { border: 2px solid #00C2B5; border-radius: 20px; padding: 48px; max-width: 1100px; margin: 48px auto 40px; box-shadow: 0 16px 40px rgba(0,194,181,0.15); background: #fff; position: relative; }
+    .pricing-hero-grid { display: flex; gap: 48px; align-items: flex-start; margin-top: 24px; flex-wrap: wrap; }
+    .pricing-hero-info { flex: 1 1 300px; }
+    .pricing-hero-tiers { flex: 1 1 420px; display: flex; gap: 16px; }
+    .tier-block { flex: 1; background: rgba(0,194,181,0.07); border-radius: 12px; padding: 28px 14px; text-align: center; }
+    .tier-price { font-size: 2.1rem; font-weight: 800; color: #1B3A6B; line-height: 1.1; white-space: nowrap; }
+    .tier-label { font-size: 0.82rem; color: var(--mid-gray); margin-top: 6px; line-height: 1.3; }
+    .pricing-addons-row { display: flex; gap: 24px; max-width: 1100px; margin: 0 auto; align-items: stretch; }
+    .pricing-addons-row .plan-card { flex: 1 1 0; display: flex; flex-direction: column; }
+    .pricing-addons-row .plan-card > a.btn { margin-top: auto; }
+    @media (max-width: 860px) {
+      .pricing-hero-grid { flex-direction: column; }
+      .pricing-hero-tiers { flex-direction: column; }
+      .pricing-addons-row { flex-direction: column; }
+    }
+    </style>
    <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -386,26 +403,37 @@ src="https://www.facebook.com/tr?id=934873835009771&ev=PageView&noscript=1"
           <p class="section-sub">One flat placement fee. Optional add-ons. No monthly retainers, no salary cuts, no surprises.</p>
         </div>
 
-        <div class="mt-48" style="max-width:520px;margin-inline:auto;">
-          <div class="plan-card plan-card--featured" style="position:relative;border:2px solid var(--teal);box-shadow:0 12px 32px rgba(0,194,181,0.18);padding:40px 32px;">
-            <div class="plan-badge">Hire Volume Pricing</div>
-            <div class="plan-name" style="font-size:1.5rem;margin-top:12px;">Hiring Package</div>
-            <ul class="plan-features" style="margin-top:16px;">
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">$</div><span style="font-size:1.05rem;"><strong>2,000</strong> / hire — 1–2 VAs</span></li>
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">$</div><span style="font-size:1.05rem;"><strong>1,500</strong> / hire — 3–5 VAs</span></li>
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">$</div><span style="font-size:1.05rem;"><strong>1,000</strong> / hire — 6+ VAs</span></li>
-            </ul>
-            <ul class="plan-features">
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>End-to-end sourcing and vetting</span></li>
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>3–5 vetted candidates presented to you</span></li>
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>Placed in 30 days or we re-run free</span></li>
-              <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>30-day fit guarantee included</span></li>
-            </ul>
-            <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;">Book a Free Call</a>
+       <div class="pricing-hero-card">
+          <div class="plan-badge">Hire Volume Pricing</div>
+          <div class="pricing-hero-grid">
+            <div class="pricing-hero-info">
+              <div class="plan-name" style="font-size:1.6rem;">Hiring Package</div>
+              <ul class="plan-features" style="margin-top:16px;">
+                <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>End-to-end sourcing and vetting</span></li>
+                <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>3–5 vetted candidates presented to you</span></li>
+                <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>Placed in 30 days or we re-run free</span></li>
+                <li class="plan-feature"><div class="plan-feature__check" aria-hidden="true">✓</div><span>30-day fit guarantee included</span></li>
+              </ul>
+              <a href="book-a-call.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;">Book a Free Call</a>
+            </div>
+            <div class="pricing-hero-tiers">
+              <div class="tier-block">
+                <div class="tier-price">$2,000</div>
+                <div class="tier-label">/ hire<br>1–2 VAs</div>
+              </div>
+              <div class="tier-block">
+                <div class="tier-price">$1,500</div>
+                <div class="tier-label">/ hire<br>3–5 VAs</div>
+              </div>
+              <div class="tier-block">
+                <div class="tier-price">$1,000</div>
+                <div class="tier-label">/ hire<br>6+ VAs</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="mt-32" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:960px;margin-inline:auto;">
+      <div class="pricing-addons-row mt-32">
 
           <div class="plan-card" style="position:relative;flex:1 1 260px;">
           <div class="plan-card" style="position:relative;">
