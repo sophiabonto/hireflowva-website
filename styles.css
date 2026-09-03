@@ -826,6 +826,7 @@ p { color: var(--mid-gray); font-size: 1rem; }
   flex-wrap: wrap;
   gap: 14px;
   justify-content: center;
+  margin-bottom: 48px;
 }
 
 /* ── ─────────────────────────────────────────────────────────── */
