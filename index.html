@@ -553,7 +553,193 @@ src="https://www.facebook.com/tr?id=934873835009771&ev=PageView&noscript=1"
       </div>
     </section>
 
-    <!-- ══ CTA ════════════════════════════════════════════════════ -->
+    <!-- ══ DO YOU NEED A VA QUIZ ═══════════════════════════════ -->
+    <section class="section" aria-label="Do you need a virtual assistant quiz">
+      <style>
+        .vaq-section{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--dark-navy) 0%,var(--navy) 100%);padding:72px 20px;margin:0 auto;max-width:900px;border-radius:20px;color:var(--white);}
+        .vaq-container{position:relative;max-width:640px;margin:0 auto;text-align:center;z-index:2;}
+        .vaq-decor{position:absolute;z-index:1;pointer-events:none;}
+        .vaq-decor--dots{top:-10px;left:-10px;width:160px;height:160px;background-image:radial-gradient(var(--teal) 1.6px, transparent 1.6px);background-size:16px 16px;opacity:0.35;}
+        .vaq-decor--x1{top:28px;right:36px;font-size:22px;color:var(--teal);opacity:0.6;transform:rotate(10deg);}
+        .vaq-decor--x2{bottom:24px;left:32px;font-size:16px;color:var(--teal);opacity:0.5;transform:rotate(-8deg);}
+        .vaq-decor--glow{top:50%;right:-60px;width:220px;height:220px;transform:translateY(-50%);background:radial-gradient(circle, rgba(0,194,181,0.25) 0%, transparent 70%);}
+        .vaq-eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:13px;font-weight:700;color:var(--teal);margin:0 0 14px;}
+        .vaq-heading{font-family:var(--font-heading);font-size:clamp(26px,4vw,38px);line-height:1.25;font-weight:700;margin:0 0 16px;color:var(--white);}
+        .vaq-accent{color:var(--teal);}
+        .vaq-subtext{font-size:16px;letter-spacing:0.5px;color:#CFE3FF;margin:0 0 32px;text-transform:uppercase;font-weight:600;}
+        .vaq-btn{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;padding:14px 32px;border-radius:999px;border:none;cursor:pointer;transition:transform 0.15s ease, box-shadow 0.15s ease;font-family:inherit;text-decoration:none;}
+        .vaq-btn--start{background:var(--teal);color:var(--dark-navy);box-shadow:0 8px 24px rgba(0,194,181,0.35);}
+        .vaq-btn--start:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,194,181,0.45);}
+        .vaq-quiz{margin-top:8px;}
+        .vaq-progress{margin-bottom:28px;}
+        .vaq-progress__bar{width:100%;height:6px;border-radius:999px;background:rgba(255,255,255,0.15);overflow:hidden;margin-bottom:8px;}
+        .vaq-progress__fill{height:100%;width:20%;background:var(--teal);border-radius:999px;transition:width 0.3s ease;}
+        .vaq-progress__label{font-size:12px;color:#9FB4D6;letter-spacing:0.5px;text-transform:uppercase;}
+        .vaq-question__title{font-family:var(--font-heading);font-size:clamp(20px,3vw,26px);margin:0 0 24px;color:var(--white);line-height:1.35;}
+        .vaq-options{display:flex;flex-direction:column;gap:12px;margin-bottom:20px;}
+        .vaq-option{text-align:left;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.18);color:var(--white);padding:14px 18px;border-radius:12px;font-size:15px;cursor:pointer;transition:all 0.15s ease;font-family:inherit;width:100%;}
+        .vaq-option:hover{border-color:var(--teal);background:rgba(0,194,181,0.12);transform:translateX(2px);}
+        .vaq-option:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+        .vaq-option.is-selected{border-color:var(--teal);background:rgba(0,194,181,0.2);}
+        .vaq-nav{display:flex;justify-content:flex-start;}
+        .vaq-btn--back{background:transparent;color:#9FB4D6;padding:8px 4px;font-size:14px;font-weight:600;}
+        .vaq-btn--back:hover{color:var(--white);}
+        .vaq-btn--back:disabled{opacity:0;pointer-events:none;}
+        .vaq-result__icon{width:56px;height:56px;border-radius:50%;background:var(--teal);color:var(--dark-navy);font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+        .vaq-result__title{font-family:var(--font-heading);font-size:clamp(22px,3.5vw,30px);margin:0 0 14px;color:var(--white);}
+        .vaq-result__desc{font-size:15px;line-height:1.6;color:#CFE3FF;margin:0 0 28px;}
+        .vaq-result__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+        .vaq-btn--primary{background:var(--teal);color:var(--dark-navy);}
+        .vaq-btn--outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.4);}
+        .vaq-btn--outline:hover{border-color:var(--teal);color:var(--teal);}
+        .vaq-retake{background:none;border:none;color:#9FB4D6;font-size:13px;text-decoration:underline;cursor:pointer;font-family:inherit;}
+        .vaq-retake:hover{color:var(--white);}
+        @media (max-width:600px){.vaq-section{padding:48px 20px;border-radius:14px;}.vaq-decor--glow{display:none;}}
+      </style>
+      <div class="container">
+        <div class="vaq-section" id="va-quiz">
+          <div class="vaq-decor vaq-decor--dots" aria-hidden="true"></div>
+          <div class="vaq-decor vaq-decor--x1" aria-hidden="true">✕</div>
+          <div class="vaq-decor vaq-decor--x2" aria-hidden="true">✕</div>
+          <div class="vaq-decor vaq-decor--glow" aria-hidden="true"></div>
+          <div class="vaq-container">
+            <div class="vaq-intro" id="vaqIntro">
+              <p class="vaq-eyebrow">Free 2-Minute Assessment</p>
+              <h2 class="vaq-heading">How Do You Know If You Need A <span class="vaq-accent">Virtual Assistant?</span></h2>
+              <p class="vaq-subtext">Take this quiz to find out</p>
+              <button class="vaq-btn vaq-btn--start" id="vaqStartBtn" type="button">Take the Quiz →</button>
+            </div>
+            <div class="vaq-quiz" id="vaqQuiz" hidden>
+              <div class="vaq-progress">
+                <div class="vaq-progress__bar"><div class="vaq-progress__fill" id="vaqProgressFill"></div></div>
+                <div class="vaq-progress__label">Question <span id="vaqStepNum">1</span> of <span id="vaqStepTotal">10</span></div>
+              </div>
+              <div id="vaqQuestionWrap" aria-live="polite"></div>
+              <div class="vaq-nav">
+                <button class="vaq-btn vaq-btn--back" id="vaqBackBtn" type="button">← Back</button>
+              </div>
+            </div>
+            <div class="vaq-result" id="vaqResult" hidden aria-live="polite">
+              <div class="vaq-result__icon" id="vaqResultIcon">✓</div>
+              <h3 class="vaq-result__title" id="vaqResultTitle"></h3>
+              <p class="vaq-result__desc" id="vaqResultDesc"></p>
+              <div class="vaq-result__actions" id="vaqResultActions"></div>
+              <button class="vaq-retake" id="vaqRetakeBtn" type="button">Retake the quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function(){
+        var questions = [
+          { q: "Do you regularly work more than 45–50 hours a week just to keep up?", options: [ { text: "No", pts: 0 }, { text: "Sometimes", pts: 1 }, { text: "Yes, most weeks", pts: 2 }, { text: "Yes, every week", pts: 3 } ] },
+          { q: "How much time each week goes to email, scheduling, or data entry instead of work that actually grows your business?", options: [ { text: "Less than 3 hours", pts: 0 }, { text: "3–8 hours", pts: 1 }, { text: "8–15 hours", pts: 2 }, { text: "15+ hours", pts: 3 } ] },
+          { q: "Have you ever missed a follow-up, deadline, or lead because you were juggling too much?", options: [ { text: "Never", pts: 0 }, { text: "Once or twice", pts: 1 }, { text: "A few times", pts: 2 }, { text: "Regularly", pts: 3 } ] },
+          { q: "Do you find yourself doing tasks that someone else could easily handle for a fraction of your hourly value?", options: [ { text: "No", pts: 0 }, { text: "A little", pts: 1 }, { text: "Yes, several", pts: 2 }, { text: "Yes, constantly", pts: 3 } ] },
+          { q: "Are you turning down new clients, deals, or opportunities because you don't have the bandwidth?", options: [ { text: "No", pts: 0 }, { text: "Rarely", pts: 1 }, { text: "Sometimes", pts: 2 }, { text: "Yes, regularly", pts: 3 } ] },
+          { q: "How often do you say \"I'll get to it later\" about tasks that just keep piling up?", options: [ { text: "Rarely", pts: 0 }, { text: "Sometimes", pts: 1 }, { text: "Often", pts: 2 }, { text: "Almost daily", pts: 3 } ] },
+          { q: "Would your business grow faster if someone else handled the repetitive back-office work?", options: [ { text: "No", pts: 0 }, { text: "Maybe", pts: 1 }, { text: "Probably", pts: 2 }, { text: "Definitely", pts: 3 } ] },
+          { q: "Do you want more time back for clients, strategy, or your personal life?", options: [ { text: "Not really", pts: 0 }, { text: "A little", pts: 1 }, { text: "Yes", pts: 2 }, { text: "Absolutely", pts: 3 } ] },
+          { q: "Have you thought about hiring help before but weren't sure where to start?", options: [ { text: "No", pts: 0 }, { text: "It's crossed my mind", pts: 1 }, { text: "Yes, once or twice", pts: 2 }, { text: "Yes, more than once", pts: 3 } ] },
+          { q: "If a reliable, vetted VA could take 10+ hours of work off your plate starting this month, how ready are you?", options: [ { text: "Not ready", pts: 0 }, { text: "Curious", pts: 1 }, { text: "Ready to explore", pts: 2 }, { text: "Ready now", pts: 3 } ] }
+        ];
+
+        var tiers = [
+          { max: 8, icon: "\u2192", title: "Not Quite Yet", desc: "You're keeping things together for now \u2014 but most business owners hit this tipping point sooner than they expect. Worth knowing what a VA could take off your plate before you get there.", actions: [ { text: "See What a VA Could Take Off Your Plate", href: "virtual-assistant-services.html", style: "outline" } ] },
+          { max: 30, icon: "\u2713", title: "Yes \u2014 You Need a Virtual Assistant", desc: "Based on your answers, you're carrying work that's costing you time, money, and opportunities. A HireFlow VA can take it off your plate so you can get back to the work that actually grows your business.", actions: [ { text: "Get Started \u2014 $999", href: "get-started.html", style: "primary" }, { text: "Book a Free Call Instead", href: "book-a-call.html", style: "outline" } ] }
+        ];
+
+        var current = 0;
+        var answers = [];
+
+        var introEl = document.getElementById('vaqIntro');
+        var quizEl = document.getElementById('vaqQuiz');
+        var resultEl = document.getElementById('vaqResult');
+        var startBtn = document.getElementById('vaqStartBtn');
+        var backBtn = document.getElementById('vaqBackBtn');
+        var retakeBtn = document.getElementById('vaqRetakeBtn');
+        var questionWrap = document.getElementById('vaqQuestionWrap');
+        var progressFill = document.getElementById('vaqProgressFill');
+        var stepNum = document.getElementById('vaqStepNum');
+        var stepTotal = document.getElementById('vaqStepTotal');
+
+        if (!introEl) return;
+        stepTotal.textContent = questions.length;
+
+        function renderQuestion(){
+          var qData = questions[current];
+          stepNum.textContent = current + 1;
+          progressFill.style.width = ((current) / questions.length * 100 + (100/questions.length)) + '%';
+          var html = '<h3 class="vaq-question__title">' + qData.q + '</h3><div class="vaq-options">';
+          qData.options.forEach(function(opt, i){
+            var selected = answers[current] === i ? ' is-selected' : '';
+            html += '<button class="vaq-option' + selected + '" type="button" data-index="' + i + '">' + opt.text + '</button>';
+          });
+          html += '</div>';
+          questionWrap.innerHTML = html;
+          backBtn.disabled = current === 0;
+          var optionBtns = questionWrap.querySelectorAll('.vaq-option');
+          optionBtns.forEach(function(btn){
+            btn.addEventListener('click', function(){
+              var idx = parseInt(btn.getAttribute('data-index'), 10);
+              answers[current] = idx;
+              setTimeout(function(){
+                if (current < questions.length - 1){
+                  current++;
+                  renderQuestion();
+                } else {
+                  showResult();
+                }
+              }, 180);
+            });
+          });
+        }
+
+        function showResult(){
+          quizEl.hidden = true;
+          resultEl.hidden = false;
+          var total = 0;
+          answers.forEach(function(ansIndex, qIndex){
+            total += questions[qIndex].options[ansIndex].pts;
+          });
+          var tier = tiers[tiers.length - 1];
+          for (var i = 0; i < tiers.length; i++){
+            if (total <= tiers[i].max){ tier = tiers[i]; break; }
+          }
+          document.getElementById('vaqResultIcon').textContent = tier.icon;
+          document.getElementById('vaqResultTitle').textContent = tier.title;
+          document.getElementById('vaqResultDesc').textContent = tier.desc;
+          var actionsEl = document.getElementById('vaqResultActions');
+          actionsEl.innerHTML = '';
+          tier.actions.forEach(function(action){
+            var a = document.createElement('a');
+            a.href = action.href;
+            a.textContent = action.text;
+            a.className = 'vaq-btn ' + (action.style === 'primary' ? 'vaq-btn--primary' : 'vaq-btn--outline');
+            actionsEl.appendChild(a);
+          });
+        }
+
+        startBtn.addEventListener('click', function(){
+          introEl.hidden = true;
+          quizEl.hidden = false;
+          current = 0;
+          answers = [];
+          renderQuestion();
+        });
+        backBtn.addEventListener('click', function(){
+          if (current > 0){ current--; renderQuestion(); }
+        });
+        retakeBtn.addEventListener('click', function(){
+          resultEl.hidden = true;
+          introEl.hidden = false;
+        });
+      })();
+    </script>
+
+<!-- ══ CTA ════════════════════════════════════════════════════ -->
     <section class="section cta-section" aria-label="Call to action">
       <div class="container">
         <div class="cta-section__inner">
