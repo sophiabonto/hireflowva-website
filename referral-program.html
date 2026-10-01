@@ -99,15 +99,21 @@
     </style>
 
     <!-- ══ PAGE HERO ══════════════════════════════════════════ -->
-    <section class="page-hero" aria-label="Page introduction">
-      <div class="container">
-        <div class="page-hero__inner">
-          <span class="section-label">For Past Clients</span>
-          <h1 class="fade-up">Refer a client. Earn up to <span class="text-teal">$500</span>.</h1>
-          <p class="fade-up-2">You already know what working with us is like. If you send someone our way and they hire through Hireflow VA, we pay you for the introduction — no cap on how many times.</p>
-          <div class="hero__actions" style="justify-content:center;margin-top:24px;">
-            <a href="mailto:sophia@investwithrama.co?subject=Referral" class="btn btn-primary btn-lg">Email Us a Referral</a>
-            <a href="#terms" class="btn btn-outline-white btn-lg">Read the Terms</a>
+    <section style="background:#FDFCFA;padding:56px 0 0;overflow:hidden;" aria-label="Page introduction">
+      <style>.ref-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:end;}@media (max-width:760px){.ref-hero-grid{grid-template-columns:1fr;}.ref-hero-grid > div:last-child{order:-1;padding-top:32px;}}</style>
+      <div class="container ref-hero-grid">
+        <div style="padding-bottom:56px;">
+          <span class="badge badge-teal" style="margin-bottom:22px;"><span style="width:7px;height:7px;border-radius:50%;background:#00A899;display:inline-block;"></span> For Past Clients</span>
+          <h1 style="font-family:var(--font-heading);font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:1.05;font-weight:400;margin:0 0 20px;color:var(--dark-navy);">Refer a client.<br><span style="color:#008F84;font-style:italic;background:linear-gradient(to bottom, transparent 68%, rgba(0,194,181,0.28) 68%);">Earn up to $500.</span></h1>
+          <p style="font-size:1.05rem;color:#435870;max-width:440px;margin:0 0 24px;">You already know what working with us is like. If you send someone our way and they hire through Hireflow VA, we pay you for the introduction — no cap on how many times.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:22px;align-items:center;">
+            <a href="mailto:sophia@investwithrama.co?subject=Referral" class="btn btn-primary">Email us a referral</a>
+            <a href="#terms" style="font-size:0.95rem;font-weight:600;color:#008F84;border-bottom:1px solid rgba(0,143,132,0.4);padding-bottom:2px;">Read the terms →</a>
+          </div>
+        </div>
+        <div style="position:relative;max-width:360px;margin:0 auto;">
+          <div style="position:relative;width:300px;height:300px;margin:0 auto;border-radius:50%;background:var(--light-teal);border:1px solid rgba(0,194,181,0.35);overflow:hidden;">
+            <img src="chris.jpg" alt="Chris, co-founder of Hireflow VA" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
           </div>
         </div>
       </div>
