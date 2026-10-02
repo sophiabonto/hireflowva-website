@@ -54,11 +54,16 @@ fbq('track', 'Lead');
 
 <div class="nav__links" role="list">
 <a href="index.html" class="nav__link" role="listitem">Home</a>
-<a href="virtual-assistant-services.html" class="nav__link" role="listitem">Services</a>
-<a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+<div class="nav__dropdown">
+<a href="virtual-assistant-services.html" class="nav__link nav__dropdown-trigger" role="listitem">Services <span class="nav__dropdown-caret" aria-hidden="true">▾</span></a>
+<div class="nav__dropdown-menu" role="list">
+<a href="virtual-assistant-services.html" class="nav__dropdown-link" role="listitem">All Services</a>
+<a href="how-it-works.html" class="nav__dropdown-link" role="listitem">How It Works</a>
+<a href="referral-program.html" class="nav__dropdown-link" role="listitem">Referrals</a>
+</div>
+</div>
 <a href="pricing.html" class="nav__link" role="listitem">Pricing</a>
 <a href="academy.html" class="nav__link" role="listitem">Academy</a>
-<a href="referral-program.html" class="nav__link" role="listitem">Referrals</a>
 <a href="about.html" class="nav__link" role="listitem">About</a>
 <a href="book-a-call.html" class="nav__link" role="listitem">Book a Free Call</a>
 <a href="get-started.html" class="btn btn-primary nav__cta" role="listitem">Hire Now!</a>
@@ -72,11 +77,14 @@ fbq('track', 'Lead');
 
 <div class="nav__mobile" id="mobileMenu" role="list">
 <a href="index.html" class="nav__mobile-link" role="listitem">Home</a>
-<a href="virtual-assistant-services.html" class="nav__mobile-link" role="listitem">Services</a>
-<a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+<button type="button" class="nav__mobile-dropdown-trigger" aria-expanded="false" aria-controls="mobileServicesSubmenu">Services <span class="nav__mobile-dropdown-caret" aria-hidden="true">▾</span></button>
+<div class="nav__mobile-submenu" id="mobileServicesSubmenu">
+<a href="virtual-assistant-services.html" class="nav__mobile-sublink" role="listitem">All Services</a>
+<a href="how-it-works.html" class="nav__mobile-sublink" role="listitem">How It Works</a>
+<a href="referral-program.html" class="nav__mobile-sublink" role="listitem">Referrals</a>
+</div>
 <a href="pricing.html" class="nav__mobile-link" role="listitem">Pricing</a>
 <a href="academy.html" class="nav__mobile-link" role="listitem">Academy</a>
-<a href="referral-program.html" class="nav__mobile-link" role="listitem">Referrals</a>
 <a href="about.html" class="nav__mobile-link" role="listitem">About</a>
 <a href="book-a-call.html" class="nav__mobile-link" role="listitem">Book a Free Call</a>
 <a href="get-started.html" class="btn btn-primary" role="listitem">Hire Now!</a>
@@ -169,7 +177,7 @@ fbq('track', 'Lead');
 
 <!-- ══ PAGE HERO ══ -->
 <section style="background:#FDFCFA;padding:56px 0 0;overflow:hidden;" aria-label="Page introduction">
-<style>.ref-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:end;}@media (max-width:760px){.ref-hero-grid{grid-template-columns:1fr;}.ref-hero-grid > div:last-child{order:-1;padding-top:32px;}}</style>
+<style>.ref-hero-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:40px;align-items:end;}@media (max-width:760px){.ref-hero-grid{grid-template-columns:1fr;}.ref-hero-grid > div:last-child{order:-1;padding-top:32px;}}</style>
 <div class="container ref-hero-grid">
 <div style="padding-bottom:56px;">
 <span class="badge badge-teal" style="margin-bottom:22px;"><span style="width:7px;height:7px;border-radius:50%;background:#00A899;display:inline-block;"></span> For Past Clients</span>
@@ -180,9 +188,9 @@ fbq('track', 'Lead');
 <a href="#terms" style="font-size:0.95rem;font-weight:600;color:#008F84;border-bottom:1px solid rgba(0,143,132,0.4);padding-bottom:2px;">Read the terms →</a>
 </div>
 </div>
-<div style="position:relative;max-width:600px;margin:0 auto;">
+<div style="position:relative;max-width:860px;margin:0 auto;">
 <div style="position:relative;width:100%;aspect-ratio:1/1;margin:0 auto;border-radius:50%;background:var(--light-teal);border:1px solid rgba(0,194,181,0.35);overflow:hidden;">
-<img src="image.png" alt="Hireflow VA referral program" style="width:92%;height:92%;margin:4%;object-fit:contain;object-position:center bottom;">
+<img src="image.png" alt="Hireflow VA referral program" style="width:95%;height:95%;margin:2.5%;object-fit:contain;object-position:center bottom;">
 </div>
 </div>
 </div>
