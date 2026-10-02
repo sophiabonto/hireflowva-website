@@ -12,10 +12,19 @@
     const mobileMenu = document.querySelector('.nav__mobile');
     if (!hamburger || !mobileMenu) return;
 
+    const closeSubmenus = () => {
+      mobileMenu.querySelectorAll('.nav__mobile-submenu.open').forEach((sub) => sub.classList.remove('open'));
+      mobileMenu.querySelectorAll('.nav__mobile-dropdown-trigger.open').forEach((trig) => {
+        trig.classList.remove('open');
+        trig.setAttribute('aria-expanded', false);
+      });
+    };
+
     hamburger.addEventListener('click', () => {
       const isOpen = hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
+      if (!isOpen) closeSubmenus();
     });
 
     // Close on outside click
@@ -24,15 +33,32 @@
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', false);
+        closeSubmenus();
       }
     });
 
     // Close on mobile link click
-    mobileMenu.querySelectorAll('.nav__mobile-link, .btn').forEach((link) => {
+    mobileMenu.querySelectorAll('.nav__mobile-link, .nav__mobile-sublink, .btn').forEach((link) => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', false);
+        closeSubmenus();
+      });
+    });
+  }
+
+  /* ── Services dropdown (mobile submenu toggle) ─────────────── */
+  function initNavDropdown() {
+    document.querySelectorAll('.nav__mobile-dropdown-trigger').forEach((trigger) => {
+      const submenu = document.getElementById(trigger.getAttribute('aria-controls'));
+      if (!submenu) return;
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = submenu.classList.toggle('open');
+        trigger.classList.toggle('open', isOpen);
+        trigger.setAttribute('aria-expanded', isOpen);
       });
     });
   }
@@ -40,7 +66,7 @@
   /* ── Active nav link ───────────────────────────────────────── */
   function setActiveNavLink() {
     const path = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav__link, .nav__mobile-link').forEach((link) => {
+    document.querySelectorAll('.nav__link, .nav__mobile-link, .nav__dropdown-link, .nav__mobile-sublink').forEach((link) => {
       const href = link.getAttribute('href');
       if (!href) return;
       const linkFile = href.split('/').pop();
@@ -48,6 +74,18 @@
       const isMatch = linkFile === path;
       if (isHome || isMatch) link.classList.add('active');
     });
+
+    // Highlight the Services trigger when a dropdown sub-item is active
+    document.querySelectorAll('.nav__dropdown').forEach((dropdown) => {
+      if (dropdown.querySelector('.nav__dropdown-link.active')) {
+        const trigger = dropdown.querySelector('.nav__dropdown-trigger');
+        if (trigger) trigger.classList.add('active');
+      }
+    });
+    if (document.querySelector('.nav__mobile-submenu .nav__mobile-sublink.active')) {
+      const mTrigger = document.querySelector('.nav__mobile-dropdown-trigger');
+      if (mTrigger) mTrigger.classList.add('active');
+    }
   }
 
   /* ── Smooth scroll for anchor links ───────────────────────── */
@@ -173,6 +211,7 @@
   /* ── Init all ───────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
+    initNavDropdown();
     setActiveNavLink();
     initSmoothScroll();
     initFAQ();
