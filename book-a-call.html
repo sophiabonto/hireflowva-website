@@ -379,11 +379,16 @@
 
           <div class="nav__links" role="list">
             <a href="index.html"         class="nav__link" role="listitem">Home</a>
-            <a href="virtual-assistant-services.html" class="nav__link" role="listitem">Services</a>
-            <a href="how-it-works.html"  class="nav__link" role="listitem">How It Works</a>
+            <div class="nav__dropdown">
+              <a href="virtual-assistant-services.html" class="nav__link nav__dropdown-trigger" role="listitem">Services <span class="nav__dropdown-caret" aria-hidden="true">▾</span></a>
+              <div class="nav__dropdown-menu" role="list">
+                <a href="virtual-assistant-services.html" class="nav__dropdown-link" role="listitem">All Services</a>
+                <a href="how-it-works.html" class="nav__dropdown-link" role="listitem">How It Works</a>
+                <a href="referral-program.html" class="nav__dropdown-link" role="listitem">Referrals</a>
+              </div>
+            </div>
             <a href="pricing.html"       class="nav__link" role="listitem">Pricing</a>
             <a href="academy.html"       class="nav__link" role="listitem">Academy</a>
-            <a href="referral-program.html" class="nav__link" role="listitem">Referrals</a>
             <a href="about.html"         class="nav__link" role="listitem">About</a>
             <a href="book-a-call.html" class="nav__link" role="listitem">Book a Free Call</a>
             <a href="get-started.html" class="btn btn-primary nav__cta" role="listitem">Hire Now!</a>
@@ -397,11 +402,14 @@
 
       <div class="nav__mobile" id="mobileMenu" role="list">
         <a href="index.html"         class="nav__mobile-link" role="listitem">Home</a>
-        <a href="virtual-assistant-services.html" class="nav__mobile-link" role="listitem">Services</a>
-        <a href="how-it-works.html"  class="nav__mobile-link" role="listitem">How It Works</a>
+        <button type="button" class="nav__mobile-dropdown-trigger" aria-expanded="false" aria-controls="mobileServicesSubmenu">Services <span class="nav__mobile-dropdown-caret" aria-hidden="true">▾</span></button>
+        <div class="nav__mobile-submenu" id="mobileServicesSubmenu">
+          <a href="virtual-assistant-services.html" class="nav__mobile-sublink" role="listitem">All Services</a>
+          <a href="how-it-works.html" class="nav__mobile-sublink" role="listitem">How It Works</a>
+          <a href="referral-program.html" class="nav__mobile-sublink" role="listitem">Referrals</a>
+        </div>
         <a href="pricing.html"       class="nav__mobile-link" role="listitem">Pricing</a>
         <a href="academy.html"       class="nav__mobile-link" role="listitem">Academy</a>
-        <a href="referral-program.html" class="nav__mobile-link" role="listitem">Referrals</a>
         <a href="about.html"         class="nav__mobile-link" role="listitem">About</a>
         <a href="book-a-call.html" class="nav__mobile-link" role="listitem">Book a Free Call</a>
         <a href="get-started.html" class="btn btn-primary" role="listitem">Hire Now!</a>
